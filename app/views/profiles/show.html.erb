@@ -2,6 +2,11 @@
 
 <%= form_for @user, url: profile_path, method: :put do |f| %>
   <div class="field">
+    <%= f.label :pseudo %>
+    <%= f.text_field :pseudo %>
+  </div>
+  
+  <div class="field">
     <%= f.label :email %>
     <%= f.email_field :email %>
   </div>
