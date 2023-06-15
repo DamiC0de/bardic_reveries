@@ -8,6 +8,9 @@ ruby "3.0.0"
 gem "devise"
 gem 'font-awesome-sass'
 gem 'jquery-rails'
+gem 'rest-client'
+gem "openai"
+gem 'dotenv-rails'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.5"

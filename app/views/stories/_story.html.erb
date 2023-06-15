@@ -1,0 +1,7 @@
+<div class="story-summary">
+  <h2>
+    <%= link_to story.title, story_path(story), style: "text-decoration: none; color: inherit;" %>
+  </h2>
+  <p>Créé le <%= story.created_at.to_date %></p>
+  <%= link_to 'Supprimer', story_path(story), method: :delete, data: { confirm: 'Êtes-vous sûr de vouloir supprimer cette histoire?' }, class: "delete-button" %>
+</div>

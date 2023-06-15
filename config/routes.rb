@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'home#index'
   
-  resources :stories, only: [:new, :create, :index]
+  resources :stories, only: [:new, :create, :index, :show, :destroy, :update]
   resources :profiles, only: [:show, :edit, :update]
   resources :subscriptions, only: [:new, :create]
 

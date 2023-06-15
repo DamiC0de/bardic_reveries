@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  age: 1
+  theme: MyString
+  first_character: MyString
+  secondary_character: MyString
+  fav_object: MyString
+  user: one
+
+two:
+  age: 1
+  theme: MyString
+  first_character: MyString
+  secondary_character: MyString
+  fav_object: MyString
+  user: two
