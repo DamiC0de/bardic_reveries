@@ -1,0 +1,22 @@
+<h1>Profil de <%= @user.email %></h1>
+
+<%= form_for @user, url: profile_path, method: :put do |f| %>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Mettre à jour" %>
+  </div>
+<% end %>
