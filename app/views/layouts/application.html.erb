@@ -1,16 +1,27 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>BardicReveries</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<%= render'layouts/head'%>
+<body>
+  <div class="container">
+    <div class="main-content">
+      <header>
+        <%= render 'layouts/navbar'%>
+      </header>
+      <main> 
+        <%= yield %>
+      </main>
+    </div>
+    <footer>
+      <%= render'layouts/footer'%>
+    </footer>  
+  </div>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+  
 
-  <body>
-    <%= yield %>
-  </body>
+  <%= javascript_include_tag 'manifest', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'burgerNav', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'loadingStory', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <script src="https://kit.fontawesome.com/b594f069a9.js" crossorigin="anonymous"></script>
+
+
+</body>
 </html>

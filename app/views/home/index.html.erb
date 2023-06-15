@@ -1,0 +1,20 @@
+<% if user_signed_in? %>
+<% else %>
+  <div class="device-loginSubscribe">
+    <%= link_to root_path, style: "text-decoration: none;" do %>
+      <div class='signIn-nav-button'>
+        Sign In
+      </div>
+    <% end %>
+    <%= link_to root_path, style: "text-decoration: none;" do %>
+      <div class='signUp-nav-button'>
+        Sign Up
+      </div>
+    <% end %>
+    <%= link_to root_path, style: "text-decoration: none;" do %>
+      <div class='about-nav-button'>
+        About
+      </div>
+    <% end %>    
+  </div>
+<% end %>

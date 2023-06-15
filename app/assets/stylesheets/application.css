@@ -1,15 +1,501 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body,html{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+      background-image: url(/assets/bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      color: #fff;
+    
+    }
+  
+  /* Texte  */
+  
+  .title {
+    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  
+  /* Navbar */
+  
+  
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      background-color: #00121f;
+      overflow: auto;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      padding-right: 4rem;
+      font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-weight: 700;
+      font-size: large;
+    }
+    
+    .navbar-nav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .navbar-nav li {
+      float: right;
+      display: inline-block;
+    }
+    
+    .navbar-nav a {
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    .navbar-nav a:hover {
+      color: #007bff;
+    }
+  
+    .navbar-nav a.active {
+      color: #007bff;
+    }
+  
+    /* logo */
+  
+    .logo {
+      float: left;
+      margin-left: 2rem;
+      background-image: url('assets/logo.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 18rem;  /* Width of logo */
+      height: 3rem;  /* Height of logo */
+      }
+  
+      .country-icons {
+        display: flex;
+        justify-content: center; /* aligne les éléments horizontalement au centre */
+        align-items: center; /* aligne les éléments verticalement au centre */
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+  
+      .country-icons li {
+          display: inline-block;
+          margin-right: 1rem;
+      }
+  
+      /* Pour le dernier élément, on supprime la marge à droite */
+      .country-icons li:last-child {
+          margin-right: 0;
+      }   
+    
+      #uk {
+          background-image: url('assets/icons/uk.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          display: block;
+          width: 30px; /* ajustez en fonction de la taille de votre icône */
+          height: 30px; /* ajustez en fonction de la taille de votre icône */
+          margin-left: 4rem;
+      }
+  
+      #uk:hover {
+          background-image: url('assets/icons/uk-hover.png');
+      }
+      
+      #fr {
+          background-image: url('assets/icons/fr.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          display: block;
+          width: 30px; /* ajustez en fonction de la taille de votre icône */
+          height: 30px; /* ajustez en fonction de la taille de votre icône */
+          margin-right: 4rem;
+      }
+  
+      #fr:hover {
+          background-image: url('assets/icons/fr-hover.png');
+      }
+      
+    
+  
+  /* Loading */
+  
+  
+  #loading-screen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+  }
+  
+  #loading-screen span {
+    opacity: 0;
+    animation: loading-dots 2s infinite;
+  }
+  
+  #loading-screen span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  #loading-screen span:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  #loading-screen span:nth-child(3) {
+    animation-delay: 1s;
+  }
+  
+  @keyframes loading-dots {
+    0%, 80%, 100% {
+      opacity: 0;
+    }
+    20%, 70% {
+      opacity: 1;
+    }
+  }
+  
+  
+  
+  /* Forms */
+  
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8rem;
+  
+  }
+  
+  .field {
+    margin-bottom: 20px;
+  }
+  
+  .field label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .field input {
+    width: 20rem;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .field input, .field select {
+    height: 2rem; /* Ajustez cette valeur à votre convenance */
+  }
+  
+  
+  .actions {
+    display: flex;
+    justify-content: center;
+    margin-right: 8rem;
+  }
+  
+  
+  .actions input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .actions input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .devise-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    color: #fff;
+    margin-right: 8rem;
+  }
+  
+  .devise-links a {
+    margin: 0 10px;
+    color: #fff;
+  }
+  
+  .remember-me {
+    align-items: center;
+  }
+  
+  .remember-me label {
+    margin-left: 10px; /* Vous pouvez ajuster cette valeur en fonction de vos besoins */
+  }
+  
+  .puce-remember {
+    position: absolute;
+  }
+  
+  
+  
+  /* Auth */
+  
+  h2#signup {
+    text-align: center;
+    margin-bottom: 2em;
+    margin-top: 4em;
+  }
+  
+  h2#login {
+    text-align: center;
+    margin-bottom: 2em;
+    margin-top: 4em;
+  }
+  
+  .form-box {
+    padding: 20px;
+    width: 100%;
+    max-width: 500px; /* vous pouvez ajuster cette valeur */
+    margin-top: 2rem;
+  }
+  
+  
+  /* Cards */
+  
+  .story-card {
+    width: 80%;
+    margin: 5% auto;
+    background-color: rgba(255,255,255,0.8); /* Changer en fonction de votre préférence */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15); /* Changer en fonction de votre préférence */
+    color: #000b12;
+    margin-top: 6rem;
+  }
+  
+  .story-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: 2% auto;
+    background-color: rgba(255,255,255,0.8); /* Changer en fonction de votre préférence */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15); /* Changer en fonction de votre préférence */
+    color: #000000;
+  }
+  
+  .story-summary h2 {
+    font-size: 2rem; /* Ajustez en fonction de vos préférences */
+    margin-bottom: 1rem;
+  }
+  
+  .story-summary p {
+    color: #888; /* Couleur du texte */
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .story-summary .delete-button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #01588d; /* Couleur de fond du bouton */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .story-summary .delete-button:hover {
+    background-color: #72b3da; /* Couleur de fond du bouton au survol */
+  }
+  
+  
+  
+  /* Footer */
+  
+  footer {
+      background-image: url('assets/footer_min.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 44vh;
+      bottom: 0;
+      text-align: center;
+      color: #fff; /* Couleur du texte */
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin-top: 2rem;
+      padding: 20px;
+    
+      }
+  
+  .container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; 
+      }
+  
+  
+  main {
+    margin-bottom: 12px;
+  }
+  
+  .main-content {
+    flex: 1;
+  } 
+  
+  /* Mobile display */
+  
+  .hamburger {
+    display: none;
+    color: #fff; /* La couleur du bouton hamburger */
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  
+  
+  /* Buttons */
+  
+  .device-loginSubscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 4rem;
+  }
+  
+  
+  .signIn-nav-button {
+    display: none;
+    background-image: url(assets/buttons/blue_button.png);
+    background-size: cover; /* Assurez-vous que l'image couvre tout l'espace disponible */
+    width: 316px; /* Ajustez selon la taille souhaitée pour le bouton */
+    height: 122px; /* Ajustez selon la taille souhaitée pour le bouton */
+    font-family: 'Ruda-Bold', Fallback, sans-serif;
+    font-size: 3rem;
+    color: rgb(255, 255, 255); /* Ajustez selon la couleur de texte souhaitée */
+    text-align: center;
+    line-height: 6.6rem; /* Cela centrera verticalement le texte. Ajustez-le à la même valeur que la hauteur du bouton */
+  }
+  
+  .signUp-nav-button {
+    display: none;
+    background-image: url(assets/buttons/purple_button.png);
+    background-size: cover; /* Assurez-vous que l'image couvre tout l'espace disponible */
+    width: 316px; /* Ajustez selon la taille souhaitée pour le bouton */
+    height: 122px; /* Ajustez selon la taille souhaitée pour le bouton */
+    font-family: 'Ruda-Bold', Fallback, sans-serif;
+    font-size: 3rem;
+    color: rgb(255, 255, 255); /* Ajustez selon la couleur de texte souhaitée */
+    text-align: center;
+    line-height: 6.6rem; /* Cela centrera verticalement le texte. Ajustez-le à la même valeur que la hauteur du bouton */
+    margin-top: 6rem;
+  }
+  
+  .about-nav-button {
+    display: none;
+    background-image: url(assets/buttons/yellow_button.png);
+    background-size: cover; /* Assurez-vous que l'image couvre tout l'espace disponible */
+    width: 182px; /* Ajustez selon la taille souhaitée pour le bouton */
+    height: 71px; /* Ajustez selon la taille souhaitée pour le bouton */
+    font-family: 'Ruda-Bold', Fallback, sans-serif;
+    font-size: 2rem;
+    color: rgb(255, 255, 255); /* Ajustez selon la couleur de texte souhaitée */
+    text-align: center;
+    line-height: 4.4rem; /* Cela centrera verticalement le texte. Ajustez-le à la même valeur que la hauteur du bouton */
+    margin-top: 6rem;
+  }
+  
+  
+  
+  @media screen and (max-width: 1100px) {
+    .navbar-nav {
+      display: none;
+    }
+  
+    .hamburger {
+      display: block;
+      background-color: rgba(0,0,0,0);
+      margin-left: 10rem;
+    }
+  
+    .signIn-nav-button {
+      display: block;
+    }
+  
+    .signUp-nav-button {
+      display: block;
+    }
+    .about-nav-button {
+      display: block;
+    }
+  }
+  
+  .navbar-nav.vertical {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: none; /* Ajout de cette ligne */
+  }
+  
+  .navbar-nav.vertical li {
+    float: none; /* Ajoutez cette ligne */
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .navbar-nav.vertical li a {
+    color: #000;
+  }
+  
+  
+  
+  
+  
+  
+  /* Fonts */
+  
+  @font-face {
+    font-family: 'Ruda-Bold';
+    src: font-url('Ruda-Bold.ttf') format('truetype');
+  }
+  

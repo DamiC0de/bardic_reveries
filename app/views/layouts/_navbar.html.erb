@@ -1,0 +1,23 @@
+<nav class="navbar">
+  <%= link_to root_path do %>
+    <div class="logo"></div>
+  <% end %>
+  <ul class="country-icons">
+      <li><a href="#" id="uk"></a></li>
+      <li><a href="#" id="fr"></a></li>
+  </ul>
+<ul class="navbar-nav">
+<% if user_signed_in? %>
+    <li><%= link_to "New Story", new_story_path, class: ("active" if current_page?(new_story_path)) %></li> 
+    <li><%= link_to "Saved Stories", stories_path, class: ("active" if current_page?(stories_path)) %></li> 
+    <li><%= link_to "My stories", "/pages/profile", class: ("active" if current_page?("/pages/profile")) %></li>
+    <li><%= link_to "Disconnect", destroy_user_session_path, method: :get %></li>
+    
+  <% else %>
+    <li><%= link_to "Login", new_user_session_path, class: ("active" if current_page?(new_user_session_path)) %></li>
+    <li><%= link_to "Subscribe", new_user_registration_path, class: ("active" if current_page?(new_user_registration_path)) %></li>
+  <% end %>
+</ul>
+  <button class="hamburger" id="hamburger"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></button>
+  
+</nav>
