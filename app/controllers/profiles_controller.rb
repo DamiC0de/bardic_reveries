@@ -17,6 +17,21 @@ class ProfilesController < ApplicationController
         render :edit
       end
     end
+
+    def update
+        if @user.update(user_params)
+          redirect_to profile_path, notice: 'Votre profil a été mis à jour avec succès.'
+        else
+          render :show
+        end
+      end
+      
+      private
+      
+    def user_params
+        params.require(:user).permit(:pseudo, :email, :password, :password_confirmation)
+    end
+          
   
     private
   

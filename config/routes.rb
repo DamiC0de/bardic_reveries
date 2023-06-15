@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
+ # config/routes.rb
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   root 'home#index'
   
   resources :stories, only: [:new, :create, :index, :show, :destroy, :update]
