@@ -5,3 +5,4 @@
 //= link burgerNav.js
 //= require jquery3
 //= link loadingStory.js
+//= require rails-ujs
