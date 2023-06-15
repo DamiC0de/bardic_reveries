@@ -23,7 +23,9 @@ class User < ApplicationRecord
       if exp.expiration_date > Time.now
         return true
       end
+      return false
     end
+    return false
   end
 
 

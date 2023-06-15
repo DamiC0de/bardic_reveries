@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.0.0"
 
 # GEM CUSTOM
-
+gem 'faker'
 gem "devise"
 gem 'font-awesome-sass'
 gem 'jquery-rails'
