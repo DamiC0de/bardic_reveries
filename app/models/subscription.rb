@@ -1,6 +1,6 @@
 class Subscription < ApplicationRecord
     belongs_to :user
-    has_one :order
+    has_many :orders
   
     def active?
       expiration_date > Time.now
