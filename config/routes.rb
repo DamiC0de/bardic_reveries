@@ -9,4 +9,8 @@ Rails.application.routes.draw do
 
   # pour une page statique par exemple:
   get 'home/index', to: 'home#index'
+  get 'subscriptions/index'
+  post 'subscriptions/index'
+  get 'subscriptions/add'
+  post 'subscriptions/add'
 end

@@ -1,4 +1,4 @@
-<h1>Profil de <%= @user.email %></h1>
+<h1>Profil de <%if @user.pseudo%> <%=@user.pseudo%><%else%><%= @user.email %><%end%></h1>
 
 <!-- User subscriptions infos -->
 <% if current_user.subscribed?%>  
