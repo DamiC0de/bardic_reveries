@@ -215,7 +215,7 @@ body,html{
     display: flex;
     justify-content: center;
     margin-right: 8rem;
-    margin-top: 1rem;
+    margin-top: 6rem;
   }
   
   
@@ -253,9 +253,13 @@ body,html{
   .remember-me label {
     margin-left: 10px; /* Vous pouvez ajuster cette valeur en fonction de vos besoins */
   }
+
   
   .puce-remember {
     position: absolute;
+    transform: scale(0.7);
+    display: flex;
+    align-items: center;
   }
   
   
@@ -264,21 +268,19 @@ body,html{
   
   h2#signup {
     text-align: center;
-    margin-bottom: 2em;
     margin-top: 4em;
   }
   
   h2#login {
     text-align: center;
-    margin-bottom: 2em;
     margin-top: 4em;
+    margin-bottom: 1rem;
   }
   
   .form-box {
     padding: 20px;
     width: 100%;
     max-width: 500px; /* vous pouvez ajuster cette valeur */
-    margin-top: 2rem;
   }
   
   
@@ -350,8 +352,6 @@ body,html{
       display: flex;
       justify-content: center;
       align-items: flex-end;
-      margin-top: 2rem;
-      padding: 20px;
     
       }
   
@@ -362,9 +362,6 @@ body,html{
       }
   
   
-  main {
-    margin-bottom: 12px;
-  }
   
   .main-content {
     flex: 1;
@@ -372,16 +369,16 @@ body,html{
   
   /* Mobile display */
   
-  .hamburger {
+  /* .hamburger {
     display: none;
-    color: #fff; /* La couleur du bouton hamburger */
+    color: #fff; 
     position: absolute;
     right: 20px;
     top: 20px;
     font-size: 30px;
     cursor: pointer;
     z-index: 100;
-  }
+  } */
   
   .navbar-nav {
     display: flex;
@@ -416,7 +413,12 @@ body,html{
     color: rgb(255, 255, 255); /* Ajustez selon la couleur de texte souhaitée */
     text-align: center;
     line-height: 6.6rem; /* Cela centrera verticalement le texte. Ajustez-le à la même valeur que la hauteur du bouton */
+    margin-top: 3.4rem;
   }
+
+  .signIn-nav-button:hover {
+    color: #d3eaf3; 
+}
   
   .signUp-nav-button {
     display: none;
@@ -431,6 +433,10 @@ body,html{
     line-height: 6.6rem; /* Cela centrera verticalement le texte. Ajustez-le à la même valeur que la hauteur du bouton */
     margin-top: 6rem;
   }
+
+  .signUp-nav-button:hover {
+    color: #d3eaf3 ; /* Changez cette valeur par la couleur souhaitée lors du survol */
+}
   
   .about-nav-button {
     display: none;
@@ -443,21 +449,23 @@ body,html{
     color: rgb(255, 255, 255); /* Ajustez selon la couleur de texte souhaitée */
     text-align: center;
     line-height: 4.4rem; /* Cela centrera verticalement le texte. Ajustez-le à la même valeur que la hauteur du bouton */
-    margin-top: 6rem;
+    margin-top: 4rem;
   }
   
-  
+  .about-nav-button:hover {
+    color: #d3eaf3; /* Changez cette valeur par la couleur souhaitée lors du survol */
+}
   
   @media screen and (max-width: 1100px) {
     .navbar-nav {
       display: none;
     }
   
-    .hamburger {
+    /* .hamburger {
       display: block;
       background-color: rgba(0,0,0,0);
       margin-left: 10rem;
-    }
+    } */
   
     .signIn-nav-button {
       display: block;
@@ -471,7 +479,7 @@ body,html{
     }
   }
   
-  .navbar-nav.vertical {
+  /* .navbar-nav.vertical {
     flex-direction: column;
     position: absolute;
     top: 60px;
@@ -480,11 +488,11 @@ body,html{
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    display: none; /* Ajout de cette ligne */
+    display: none; 
   }
   
   .navbar-nav.vertical li {
-    float: none; /* Ajoutez cette ligne */
+    float: none; 
     display: block;
     margin: 5px 0;
   }
@@ -493,7 +501,7 @@ body,html{
     color: #000;
   }
   
-  
+   */
   
   
   
@@ -504,4 +512,3 @@ body,html{
     font-family: 'Ruda-Bold';
     src: font-url('Ruda-Bold.ttf') format('truetype');
   }
-  
