@@ -1,4 +1,21 @@
 <% if user_signed_in? %>
+  <div class="device-home">
+     <%= link_to new_story_path, style: "text-decoration: none;" do %>
+      <div class='newStory-nav-button'>
+        New Story
+      </div>
+    <% end %>
+     <%= link_to stories_path, style: "text-decoration: none;" do %>
+      <div class='savedStories-nav-button'>
+        Saved Stories
+      </div>
+    <% end %>    
+     <%= link_to stories_path, style: "text-decoration: none;" do %>
+      <div class='myProfil-nav-button'>
+        My Profil
+      </div>
+    <% end %> 
+
 <% else %>
   <div class="device-loginSubscribe">
     <%= link_to new_user_session_path, style: "text-decoration: none;" do %>
@@ -17,4 +34,5 @@
       </div>
     <% end %>    
   </div>
+
 <% end %>
