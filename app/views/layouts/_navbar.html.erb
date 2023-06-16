@@ -8,6 +8,7 @@
   </ul>
 <ul class="navbar-nav">
 <% if user_signed_in? %>
+    
     <li><%= link_to "New Story", new_story_path, class: ("active" if current_page?(new_story_path)) %></li> 
     <li><%= link_to "Saved Stories", stories_path, class: ("active" if current_page?(stories_path)) %></li> 
     <li><%= link_to "My Profil", profile_path, class: ("active" if current_page?(profile_path)) %></li> 
@@ -17,7 +18,8 @@
     <li><%= link_to "Login", new_user_session_path, class: ("active" if current_page?(new_user_session_path)) %></li>
     <li><%= link_to "Subscribe", new_user_registration_path, class: ("active" if current_page?(new_user_registration_path)) %></li>
   <% end %>
+  <li><%= link_to "See subscriptions", "/subscriptions/index", class: ("active" if current_page?(new_story_path)) %></li> <!--at to had path--> 
 </ul>
   <%# <button class="hamburger" id="hamburger"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></button> %>
-  
+
 </nav>

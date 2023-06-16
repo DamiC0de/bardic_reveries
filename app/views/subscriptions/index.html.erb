@@ -1,3 +1,4 @@
+<%if user_signed_in?%>
 <%if current_user.subscriptions.any?%>                  <!-- check if user has subscription -->
     <% exp = current_user.subscriptions.all.sample %>
     <% current_user.subscriptions.each do |sub|%>       <!-- check for expiration date (have to improve(find a way to return the higest expiration date instead of checking everysingle one of them)) -->
@@ -19,3 +20,6 @@
 
 
 <%= link_to 'test', 'add', method: :add, class: "button" %>
+    <%else%>
+    <%= link_to 'test', '/users/sign_in', method: :add, class: "button" %>
+    <%end%> 
