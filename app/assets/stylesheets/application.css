@@ -184,11 +184,14 @@ body,html{
     justify-content: center;
     align-items: center;
     margin-left: 8rem;
+    
   
   }
-  
+
   .field {
     margin-bottom: 20px;
+    
+
   }
   
   .field label {
@@ -203,7 +206,8 @@ body,html{
   }
   
   .field input, .field select {
-    height: 2rem; /* Ajustez cette valeur à votre convenance */
+    height: 2rem;
+    border-radius: 1.2rem;
   }
   
   
@@ -211,6 +215,7 @@ body,html{
     display: flex;
     justify-content: center;
     margin-right: 8rem;
+    margin-top: 1rem;
   }
   
   
@@ -221,6 +226,7 @@ body,html{
     border-radius: 4px;
     padding: 10px 20px;
     cursor: pointer;
+    border-radius: 1.2rem;
   }
   
   .actions input[type="submit"]:hover {
