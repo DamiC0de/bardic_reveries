@@ -11,7 +11,7 @@
     
     <div class="field">
     <%= f.label :age %>
-    <%= f.number_field :age, required: true, min: 0 %>
+    <%= f.text_field :age, required: true, inputmode: "numeric", pattern: "[0-9]*" %>
   </div>
     
     <div class="field">
@@ -25,9 +25,9 @@
     </div>
 
     <div class="field">
-      <%= f.label :fav_object %>
-      <%= f.text_field :fav_object, required: true %>
-    </div>
+    <%= f.label :fav_object %>
+    <%= f.text_field :fav_object, required: true, pattern: "[^0-9]*" %>
+  </div>
     
     <div class="actions">
       <%= f.submit "Generate History", class: 'submit-button' %>

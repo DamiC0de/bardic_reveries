@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_15_133947) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_16_132226) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "orders", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "subscription_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["subscription_id"], name: "index_orders_on_subscription_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
 
   create_table "stories", force: :cascade do |t|
     t.integer "age"
@@ -50,6 +59,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_15_133947) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "orders", "subscriptions"
+  add_foreign_key "orders", "users"
   add_foreign_key "stories", "users"
   add_foreign_key "subscriptions", "users"
 end

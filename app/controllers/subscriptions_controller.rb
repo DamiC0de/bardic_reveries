@@ -14,9 +14,11 @@ class SubscriptionsController < ApplicationController
                 end
                 new_exp = exp.expiration_date + 1.month
                 exp.update(expiration_date:new_exp)
+                Order.create(user:current_user,subscription:exp)
                 
             else
-                Subscription.create(user:current_user,start_date:Time.now,expiration_date:(Time.now + 1.day))
+                sub = Subscription.create(user:current_user,start_date:Time.now,expiration_date:(Time.now + 1.day))
+                Order.create(user:current_user,subscription:sub)
             end
         end  
         redirect_to "/subscriptions/index"
