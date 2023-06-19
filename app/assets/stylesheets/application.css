@@ -587,3 +587,8 @@ body,html{
     font-family: 'Ruda-Bold';
     src: font-url('Ruda-Bold.ttf') format('truetype');
   }
+
+  .button-text {
+    font-size: 28px; /* Remplacez la valeur par la taille souhaitée */
+  }
+  

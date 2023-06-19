@@ -2,8 +2,8 @@
   <h2>
     <%= link_to story.title, story_path(story), style: "text-decoration: none; color: inherit;" %>
   </h2>
-  <p>Created the <%= story.created_at.to_date %><%if (story.user).pseudo %> by <%=(story.user).pseudo%> <%end%></p>
+  <p><%=t('creation_story')%> <%= story.created_at.to_date %><%if (story.user).pseudo %> by <%=(story.user).pseudo%> <%end%></p>
   <% if current_user == story.user %>
-  <%= link_to 'Supprimer', story_path(story), method: :delete, data: { confirm: 'Êtes-vous sûr de vouloir supprimer cette histoire?' }, class: "delete-button" %>
+  <%= link_to t('delete_story'), story_path(story), method: :delete, data: { confirm: t('delete_confirm') }, class: "delete-button" %>
   <%end%>
   </div>

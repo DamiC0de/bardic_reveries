@@ -5,27 +5,27 @@
 <div class="form-container">
   <%= form_for @story, html: { class: 'form-box' } do |f| %>
     <div class="field">
-      <%= f.label :theme %>
+      <%= f.label t('theme') %>
       <%= f.select :theme, ["Fairy Tales", "Sci-Fi", "Dongeon and Dragons"], {}, { required: true } %>
     </div>
     
     <div class="field">
-    <%= f.label :age %>
+    <%= f.label t('age') %>
     <%= f.text_field :age, required: true, inputmode: "numeric", pattern: "[0-9]*" %>
   </div>
     
     <div class="field">
-      <%= f.label :first_character %>
+      <%= f.label t('main_character') %>
       <%= f.text_field :first_character, required: true %>
     </div>
 
     <div class="field">
-      <%= f.label :secondary_character %>
+      <%= f.label t('second_character') %>
       <%= f.text_field :secondary_character, required: true %>
     </div>
 
     <div class="field">
-    <%= f.label :fav_object %>
+    <%= f.label t('fav_object') %>
     <%= f.text_field :fav_object, required: true, pattern: "[^0-9]*" %>
   </div>
     

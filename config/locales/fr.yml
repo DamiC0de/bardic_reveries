@@ -1,0 +1,23 @@
+fr:
+  new_story: "Nouvelle histoire"
+  personnal_stories: "Mes histoires"
+  my_profile : "Mon profil"
+  disconnect : "Se déconnecter"
+  login : "Se connecter"
+  subscribe : "S'inscrire"
+  see_subscription : "Voir les abonnements"
+  all_rights_reserved : "Tout droits réservés"
+  password : "Mot de passe"
+  password_confirmation : "Mot de passe à confirmer"
+  update : "Mettre à jour"
+  delete_story : "Supprimer"
+  delete_confirm : "Êtes-vous sûr de vouloir supprimer cette histoire?"
+  creation_story : "Histoire générée le"
+  main_character : "Personnage principal"
+  second_character : "Personnage secondaire"
+  fav_object : "Elément à intégrer à l'histoire"
+  theme : "Thème"
+  age : "Âge"
+  characters : "caractères"
+
+   # <%=t('')%>.
