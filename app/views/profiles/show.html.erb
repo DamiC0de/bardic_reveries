@@ -1,8 +1,8 @@
-<h1>Profil de <%if @user.pseudo%> <%=@user.pseudo%><%else%><%= @user.email %><%end%></h1>
+<h1> <%=t('profile_of')%> <%if @user.pseudo%> <%=@user.pseudo%><%else%><%= @user.email %><%end%></h1>
 
 <!-- User subscriptions infos -->
 <% if current_user.subscribed?%>  
-  Currently subscribed
+<%=t('subscribed')%>
 <% else %>
   Not subscribed
 <%end %>
@@ -15,8 +15,9 @@
             <%end%>
         <%end%>
     <%end%>
+
     <%if exp.active?%>
-        Time remaining  : 
+        - <%=t('time_remain')%>  : 
         <%= distance_of_time_in_words(Time.now,exp.expiration_date,options = {include_seconds: true})%>
     <%else%>
         Your subscription expired <%= distance_of_time_in_words(exp.expiration_date,Time.now,options = {include_seconds: true})%> ago

@@ -19,5 +19,8 @@ fr:
   theme : "Thème"
   age : "Âge"
   characters : "caractères"
+  profile_of : "Profil de"
+  subscribed : "Abonnement en cours"
+  time_remain : "Temps restant"
 
    # <%=t('')%>.

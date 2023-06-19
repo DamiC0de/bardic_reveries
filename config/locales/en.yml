@@ -19,3 +19,6 @@ en:
   theme : "Theme"
   age : "Age"
   character : "characters"
+  profile_of : "Profile of"
+  subscribed : "Currently subscribed"
+  time_remain : "Time remain"
