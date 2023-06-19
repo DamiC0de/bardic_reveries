@@ -1,0 +1,23 @@
+<% User.all.each do |user|%>
+    <p><%=user.pseudo%> <%= user.subscribed?%>
+        <%if user.subscriptions.any?%>                  <!-- check if user has subscription -->
+            <% exp = user.subscriptions.all.sample %>
+            <% user.subscriptions.each do |sub|%>       <!-- check for expiration date (have to improve(find a way to return the higest expiration date instead of checking everysingle one of them)) -->
+                <% if sub.active? %>
+                    <%if sub.expiration_date >= exp.expiration_date %>
+                        <%exp = sub%>
+                    <%end%>
+                <%end%>
+            <%end%>
+            <%if exp.active?%>
+                Time remaining  : 
+                <%= distance_of_time_in_words(Time.now,exp.expiration_date,options = {include_seconds: true})%>
+            <%else%>
+                subscription expired <%= distance_of_time_in_words(exp.expiration_date,Time.now,options = {include_seconds: true})%> ago
+            <%end%>
+        <%end%>
+    </p>
+    <% user.orders.each do |order|%>
+        <p><%=order.created_at%></p>
+    <%end%>
+<%end%>
