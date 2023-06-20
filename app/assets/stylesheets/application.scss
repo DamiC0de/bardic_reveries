@@ -254,6 +254,12 @@ h2#login {
   margin-top: 4em;
   margin-bottom: 1rem;
 }
+
+h2#profile {
+  text-align: center !important;
+  margin-top: 2em;
+  margin-bottom: 4rem;
+}
   
 .form-box {
   padding: 20px;
@@ -388,7 +394,7 @@ footer {
 }
 
 .newStory-nav-button:hover {
-  color: #d3eaf3; 
+  color: #ff954e; 
 }
 
 .savedStories-nav-button {
@@ -406,7 +412,7 @@ footer {
 }
 
 .savedStories-nav-button:hover {
-  color: #d3eaf3; 
+  color: #2a27ae; 
 }
 
 .myProfil-nav-button {
@@ -424,7 +430,25 @@ footer {
 }
 
 .myProfil-nav-button:hover {
-  color: #d3eaf3; 
+  color: #021e33; 
+}
+
+.storyPublic-nav-button {
+  display: none;
+  background-image: url(assets/buttons/sky_button.png);
+  background-size: cover;
+  width: 233px;
+  height: 89px; 
+  font-family: 'Ruda-Bold', Fallback, sans-serif;
+  font-size: 1.6rem;
+  color: rgb(255, 255, 255); 
+  text-align: center;
+  line-height: 5.2rem; 
+  margin-top: 5rem;
+}
+
+.storyPublic-nav-button:hover {
+  color: #4aa3b3; 
 }
   
 .signIn-nav-button {
@@ -495,6 +519,10 @@ footer {
 }
 
 .myProfil-nav-button {
+  display: block;
+}
+
+.storyPublic-nav-button {
   display: block;
 }
 

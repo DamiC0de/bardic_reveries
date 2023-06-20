@@ -1,54 +1,57 @@
-<h1> <%=t('profile_of')%> <%if @user.pseudo%> <%=@user.pseudo%><%else%><%= @user.email %><%end%></h1>
-
-<!-- User subscriptions infos -->
-<% if current_user.subscribed?%>  
-<%=t('subscribed')%>
-<% else %>
-  Not subscribed
-<%end %>
-<%if current_user.subscriptions.any?%>                  <!-- check if user has subscription -->
-    <% exp = current_user.subscriptions.all.sample %>
-    <% current_user.subscriptions.each do |sub|%>       <!-- check for expiration date (have to improve(find a way to return the higest expiration date instead of checking everysingle one of them)) -->
-        <% if sub.active? %>
-            <%if sub.expiration_date >= exp.expiration_date %>
-                <%exp = sub%>
+<h2 id="profile">Profile of <%if @user.pseudo%> <%=@user.pseudo%><%else%><%= @user.email %><%end%></h2>
+<div class="form-container">
+  <div class="form-box">
+    <!-- User subscriptions infos -->
+    <% if current_user.subscribed?%>  
+    <%=t('subscribed')%>
+    <% else %>
+    Not subscribed
+    <%end %>
+    <%if current_user.subscriptions.any?%>
+        <% exp = current_user.subscriptions.all.sample %>
+        <% current_user.subscriptions.each do |sub|%>
+            <% if sub.active? %>
+                <%if sub.expiration_date >= exp.expiration_date %>
+                    <%exp = sub%>
+                <%end%>
             <%end%>
         <%end%>
-    <%end%>
 
-    <%if exp.active?%>
-        - <%=t('time_remain')%>  : 
-        <%= distance_of_time_in_words(Time.now,exp.expiration_date,options = {include_seconds: true})%>
+        <%if exp.active?%>
+            - <%=t('time_remain')%>  : 
+            <%= distance_of_time_in_words(Time.now,exp.expiration_date,options = {include_seconds: true})%>
+        <%else%>
+            Your subscription expired <%= distance_of_time_in_words(exp.expiration_date,Time.now,options = {include_seconds: true})%> ago
+        <%end%>
     <%else%>
-        Your subscription expired <%= distance_of_time_in_words(exp.expiration_date,Time.now,options = {include_seconds: true})%> ago
+        You aren't subscribed
     <%end%>
-<%else%>
-    You aren't subscribed
-<%end%>
-<!-- end of User subscriptions infos -->
+    <!-- end of User subscriptions infos -->
 
-<%= form_for @user, url: profile_path, method: :put do |f| %>
-  <div class="field">
-    <%= f.label :pseudo %>
-    <%= f.text_field :pseudo %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-  </div>
+    <%= form_for @user, url: profile_path, method: :put do |f| %>
+      <div class="field">
+        <%= f.label :pseudo %>
+        <%= f.text_field :pseudo %>
+      </div>
+      
+      <div class="field">
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+      </div>
 
-  <div class="field">
-  <%= f.label :password, t('password') %>
-    <%= f.password_field :password %>
-  </div>
+      <div class="field">
+      <%= f.label :password, t('password') %>
+        <%= f.password_field :password %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation, t('password_confirmation') %>
-    <%= f.password_field :password_confirmation %>
-  </div>
+      <div class="field">
+        <%= f.label :password_confirmation, t('password_confirmation') %>
+        <%= f.password_field :password_confirmation %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit t('update') %>
+      <div class="actions">
+        <%= f.submit t('update') %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
