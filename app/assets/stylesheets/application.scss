@@ -242,7 +242,7 @@ body {
   
   
   
-/* Auth */
+/* Auth & Titles */
   
 h2#signup {
   text-align: center;
@@ -260,6 +260,11 @@ h2#profile {
   margin-top: 2em;
   margin-bottom: 4rem;
 }
+
+.subscription-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
   
 .form-box {
   padding: 20px;
@@ -270,6 +275,7 @@ h2#profile {
 .button-text {
   font-size: 28px;
 }
+
   
 /* Cards */
   
