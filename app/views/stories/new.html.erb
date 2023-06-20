@@ -10,9 +10,10 @@
     </div>
     
     <div class="field">
-    <%= f.label t('age') %>
-    <%= f.text_field :age, required: true, inputmode: "numeric", pattern: "[0-9]*" %>
-  </div>
+      <%= f.label t('age') %>
+      <%= f.number_field :age, required: true, min: 1, step: 1 %>
+    </div>
+
     
     <div class="field">
       <%= f.label t('main_character') %>
@@ -30,7 +31,7 @@
   </div>
   
   <div class="field">
-    <%= f.label t('is_public') %>
+    <%= f.label t('public story ?') %>
     <%= f.select :is_public, ["true", "false"], {}, { required: true } %>
   </div>
     <div class="actions">
