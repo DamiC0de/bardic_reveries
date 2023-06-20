@@ -82,6 +82,18 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'in-v3.mailjet.com',
+    port:                 587,
+    domain:               'votre_domaine.com',
+    user_name:            ENV['MAILJET_API_KEY'],
+    password:             ENV['MAILJET_SECRET_KEY'],
+    authentication:       'plain',
+    enable_starttls_auto: true  
+  }
+
+
   # Use a different logger for distributed setups.
   # require "syslog/logger"
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new "app-name")

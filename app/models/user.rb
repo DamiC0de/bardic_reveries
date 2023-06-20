@@ -12,6 +12,11 @@ class User < ApplicationRecord
   #   UserMailer.welcome_email(self).deliver_now
   # end
 
+  def welcome_send
+    UserMailer.welcome_email(self).deliver_later
+  end
+  
+
   def subscribed?
     if subscriptions.any?
       exp = subscriptions.all.sample
