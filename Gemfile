@@ -14,6 +14,7 @@ gem 'dotenv-rails'
 gem 'letter_opener'
 gem 'rails-i18n'
 gem 'sassc-rails'
+gem 'stripe'
 
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
