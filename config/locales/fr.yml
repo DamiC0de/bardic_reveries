@@ -22,6 +22,6 @@ fr:
   profile_of : "Profil de"
   subscribed : "Abonnement en cours"
   time_remain : "Temps restant"
-  public_story : "Histoire partagée"
+  public_story : "Partager histoire?"
 
    # <%=t('')%>.
