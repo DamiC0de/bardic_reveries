@@ -1,266 +1,244 @@
-body,html{
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-      background-image: url('assets/bg.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-      color: #fff;
-    
-    }
-  
-  /* Texte  */
-  
-  .title {
-    margin-left: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-  }
-  
-  
-  /* Navbar */
-  
-  
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      background-color: #00121f;
-      overflow: auto;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      padding-right: 4rem;
-      font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-      font-weight: 700;
-      font-size: large;
-    }
-    
-    .navbar-nav {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .navbar-nav li {
-      float: right;
-      display: inline-block;
-    }
-    
-    .navbar-nav a {
-      display: block;
-      color: #fff;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-    
-    .navbar-nav a:hover {
-      color: #007bff;
-    }
-  
-    .navbar-nav a.active {
-      color: #007bff;
-    }
-  
-    /* logo */
-  
-    .logo {
-      float: left;
-      margin-left: 2rem;
-      background-image: url('assets/logo.svg');
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 18rem;  /* Width of logo */
-      height: 3rem;  /* Height of logo */
-      }
-  
-      .country-icons {
-        display: flex;
-        justify-content: center; /* aligne les éléments horizontalement au centre */
-        align-items: center; /* aligne les éléments verticalement au centre */
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-    
-  
-      .country-icons li {
-          display: inline-block;
-          margin-right: 1rem;
-      }
-  
-      /* Pour le dernier élément, on supprime la marge à droite */
-      .country-icons li:last-child {
-          margin-right: 0;
-      }   
-    
-      #uk {
-          background-image: url('assets/icons/uk.png');
-          background-repeat: no-repeat;
-          background-size: contain;
-          display: block;
-          width: 30px; /* ajustez en fonction de la taille de votre icône */
-          height: 30px; /* ajustez en fonction de la taille de votre icône */
-          margin-left: 4rem;
-      }
-  
-      #uk:hover {
-          background-image: url('assets/icons/uk-hover.png');
-      }
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('assets/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #fff;
+}
+
+/* Texte */
+.title {
+  margin: 2rem 0 4rem 2rem;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #00121f;
+  padding: 1rem 4rem 1rem 0;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  font-size: large;
+  overflow: auto;
+}
+
+.navbar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav li {
+  float: right;
+  display: inline-block;
+}
+
+.navbar-nav a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar-nav a:hover,
+.navbar-nav a.active {
+  color: #007bff;
+}
+
+/* logo */
+.logo {
+  float: left;
+  margin-left: 2rem;
+  background-image: url('assets/logo.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 18rem;
+  height: 3rem;
+}
+
+/* Country icons */
+.country-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.country-icons li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.country-icons li:last-child {
+  margin-right: 0;
+}
+
+#uk,
+#fr {
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+#uk {
+  background-image: url('assets/icons/uk.png');
+  margin-left: 4rem;
+}
+
+#uk:hover {
+  background-image: url('assets/icons/uk-hover.png');
+}
+
+#fr {
+  background-image: url('assets/icons/fr.png');
+  margin-right: 4rem;
+}
+
+#fr:hover {
+  background-image: url('assets/icons/fr-hover.png');
+}
       
-      #fr {
-          background-image: url('assets/icons/fr.png');
-          background-repeat: no-repeat;
-          background-size: contain;
-          display: block;
-          width: 30px; /* ajustez en fonction de la taille de votre icône */
-          height: 30px; /* ajustez en fonction de la taille de votre icône */
-          margin-right: 4rem;
-      }
-  
-      #fr:hover {
-          background-image: url('assets/icons/fr-hover.png');
-      }
-      
-    
-  
-  /* Loading */
+
+/* Loading */
   
   
-  #loading-screen {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 2rem;
-  }
+#loading-screen {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+}
   
-  #loading-screen span {
+#loading-screen span {
+  opacity: 0;
+  animation: loading-dots 2s infinite;
+}
+  
+#loading-screen span:nth-child(1) {
+  animation-delay: 0s;
+}
+  
+#loading-screen span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+  
+#loading-screen span:nth-child(3) {
+  animation-delay: 1s;
+}
+  
+@keyframes loading-dots {
+  0%, 80%, 100% {
     opacity: 0;
-    animation: loading-dots 2s infinite;
   }
-  
-  #loading-screen span:nth-child(1) {
-    animation-delay: 0s;
+  20%, 70% {
+    opacity: 1;
   }
-  
-  #loading-screen span:nth-child(2) {
-    animation-delay: 0.5s;
-  }
-  
-  #loading-screen span:nth-child(3) {
-    animation-delay: 1s;
-  }
-  
-  @keyframes loading-dots {
-    0%, 80%, 100% {
-      opacity: 0;
-    }
-    20%, 70% {
-      opacity: 1;
-    }
-  }
-  
-  
-  
-  /* Forms */
-  
-  
-  .form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 8rem;
-    
-  
-  }
+}
 
-  .field {
-    margin-bottom: 20px;
-    
+/* Forms */
+  
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8rem;
+}
 
-  }
+.field {
+  margin-bottom: 20px;
+}
   
-  .field label {
-    display: block;
-    font-weight: bold;
-  }
+.field label {
+  display: block;
+  font-weight: bold;
+}
   
-  .field input {
-    width: 20rem;
-    padding: 10px;
-    font-size: 16px;
-  }
+.field input {
+  width: 20rem;
+  padding: 10px;
+  font-size: 16px;
+}
   
-  .field input, .field select {
-    height: 2rem;
-    border-radius: 1.2rem;
-  }
-  
-  
-  .actions {
-    display: flex;
-    justify-content: center;
-    margin-right: 8rem;
-    margin-top: 3.6rem;
-  }
+.field input, .field select {
+  height: 2rem;
+  border-radius: 1.2rem;
+}
   
   
-  .actions input[type="submit"] {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 1.2rem;
-  }
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-right: 8rem;
+  margin-top: 3.6rem;
+}
   
-  .actions input[type="submit"]:hover {
-    background-color: #0056b3;
-  }
   
-  .devise-links {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    color: #fff;
-    margin-right: 8rem;
-  }
+.actions input[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 1.2rem;
+}
   
-  .devise-links a {
-    margin: 0 10px;
-    color: #fff;
-  }
+.actions input[type="submit"]:hover {
+  background-color: #0056b3;
+}
   
-  .remember-me {
-    align-items: center;
-  }
+.devise-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color: #fff;
+  margin-right: 8rem;
+}
   
-  .remember-me label {
-    margin-left: 10px; /* Vous pouvez ajuster cette valeur en fonction de vos besoins */
-  }
+.devise-links a {
+  margin: 0 10px;
+  color: #fff;
+}
+  
+.remember-me {
+  align-items: center;
+}
+  
+.remember-me label {
+  margin-left: 10px; /* Vous pouvez ajuster cette valeur en fonction de vos besoins */
+}
 
   
-  .puce-remember {
-    position: absolute;
-    transform: scale(0.7);
-    display: flex;
-    align-items: center;
-  }
+.puce-remember {
+  position: absolute;
+  transform: scale(0.7);
+  display: flex;
+  align-items: center;
+}
   
   
   
@@ -553,34 +531,7 @@ body,html{
       display: block;
     }
   }
-  
-  /* .navbar-nav.vertical {
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    display: none; 
-  }
-  
-  .navbar-nav.vertical li {
-    float: none; 
-    display: block;
-    margin: 5px 0;
-  }
-  
-  .navbar-nav.vertical li a {
-    color: #000;
-  }
-  
-   */
-  
-  
-  
-  
+
   /* Fonts */
   
   @font-face {

@@ -1,1 +1,42 @@
-<%= render @stories %>
+<% if user_signed_in? %>
+  <%= render @stories %>
+  <div class="device-home">
+  <%= link_to new_story_path, style: "text-decoration: none;" do %>
+    <div class='newStory-nav-button'>
+      <span class="button-text"><%= t('new_story') %></span>
+    </div>
+  <% end %>
+     <%= link_to stories_path, style: "text-decoration: none;" do %>
+      <div class='savedStories-nav-button'>
+      <%= t('personnal_stories') %>
+      </div>
+    <% end %>    
+     <%= link_to stories_path, style: "text-decoration: none;" do %>
+      <div class='myProfil-nav-button'>
+      <%= t('my_profile') %>
+      </div>
+    <% end %> 
+
+<% else %>
+  <div class="device-loginSubscribe">
+    <%= link_to new_user_session_path, style: "text-decoration: none;" do %>
+      <div class='signIn-nav-button'>
+        Sign In
+      </div>
+    <% end %>
+    <%= link_to new_user_registration_path, style: "text-decoration: none;" do %>
+      <div class='signUp-nav-button'>
+        Sign Up
+      </div>
+    <% end %>
+    <%= link_to root_path, style: "text-decoration: none;" do %>
+      <div class='about-nav-button'>
+        About
+      </div>
+    <% end %>    
+  </div>
+
+<% end %>
+
+
+
