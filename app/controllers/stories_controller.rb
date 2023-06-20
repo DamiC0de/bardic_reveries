@@ -51,7 +51,7 @@ class StoriesController < ApplicationController
     private
   
     def story_params
-      params.require(:story).permit(:theme, :age, :first_character, :secondary_character, :fav_object)
+      params.require(:story).permit(:theme, :age, :first_character, :secondary_character, :fav_object, :is_public)
     end
 
     
