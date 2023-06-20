@@ -8,9 +8,9 @@ class User < ApplicationRecord
   after_create :welcome_send
   has_many :orders
 
-  def welcome_send
-    UserMailer.welcome_email(self).deliver_now
-  end
+  # def welcome_send
+  #   UserMailer.welcome_email(self).deliver_now
+  # end
 
   def subscribed?
     if subscriptions.any?
