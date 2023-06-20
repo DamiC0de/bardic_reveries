@@ -2,12 +2,7 @@ class StoriesController < ApplicationController
     before_action :authenticate_user!
 
     def index
-      @stories = []
-      Story.all.each do |story|
-        if story.is_public
-          @stories << story
-        end
-      end
+      @stories = current_user.stories
     end
       
   
@@ -51,7 +46,7 @@ class StoriesController < ApplicationController
     private
   
     def story_params
-      params.require(:story).permit(:theme, :age, :first_character, :secondary_character, :fav_object)
+      params.require(:story).permit(:theme, :age, :first_character, :secondary_character, :fav_object, :is_public)
     end
 
     
