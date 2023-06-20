@@ -31,9 +31,10 @@
   </div>
   
   <div class="field">
-    <%= f.label t('public_story') %>
-    <%= f.select :is_public, ["true", "false"], {}, { required: true } %>
-  </div>
+  <%= f.label t('public_story') %>
+  <%= f.check_box :is_public, {}, true, false %>
+</div>
+
     <div class="actions">
       <%= f.submit "Generate History", class: 'submit-button' %>
     </div>
