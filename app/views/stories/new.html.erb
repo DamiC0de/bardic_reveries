@@ -30,8 +30,8 @@
   </div>
   
   <div class="field">
-    <p>Is Prublic ?
-    <%= f.select :is_public, [true, false], {}, { required: true } %></p>
+    <%= f.label t('is_public') %>
+    <%= f.select :is_public, ["true", "false"], {}, { required: true } %>
   </div>
     <div class="actions">
       <%= f.submit "Generate History", class: 'submit-button' %>

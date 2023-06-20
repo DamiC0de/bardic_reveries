@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :stories
   has_many :subscriptions
-  # after_create :welcome_send
+  after_create :welcome_send
   has_many :orders
 
   # def welcome_send
