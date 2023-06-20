@@ -6,7 +6,8 @@ class UserMailer < ApplicationMailer
         @user = user 
     
         #on définit une variable @url qu'on utilisera dans la view d’e-mail
-        @url  = 'bardic-reveries-fly.fly.dev' 
+        @url  = 'http://localhost:3000/login' 
+        #'bardic-reveries-fly.fly.dev' 
     
         # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
         mail(to: @user.email, subject: 'Bienvenue dans les rêves de Bardic Reveries !') 
@@ -20,7 +21,8 @@ class UserMailer < ApplicationMailer
         @order = order
     
         #on définit une variable @url qu'on utilisera dans la view d’e-mail
-        @url  = 'http://bardic-reveries-fly.fly.dev/users/sign_up' 
+        @url  = 'http://localhost:3000/order' 
+        #'http://bardic-reveries-fly.fly.dev/users/sign_up' 
     
         # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
         mail(to: @user.email, subject: "Merci pour votre rêveries N° #{@order.id} !") 
