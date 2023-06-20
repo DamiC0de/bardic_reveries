@@ -229,7 +229,7 @@ body {
 }
   
 .remember-me label {
-  margin-left: 10px; /* Vous pouvez ajuster cette valeur en fonction de vos besoins */
+  margin-left: 10px;
 }
 
   
@@ -242,169 +242,153 @@ body {
   
   
   
-  /* Auth */
+/* Auth */
   
-  h2#signup {
-    text-align: center;
-    margin-top: 2em;
-  }
+h2#signup {
+  text-align: center;
+  margin-top: 2em;
+}
   
-  h2#login {
-    text-align: center;
-    margin-top: 4em;
-    margin-bottom: 1rem;
-  }
+h2#login {
+  text-align: center;
+  margin-top: 4em;
+  margin-bottom: 1rem;
+}
   
-  .form-box {
-    padding: 20px;
-    width: 100%;
-    max-width: 500px; /* vous pouvez ajuster cette valeur */
-  }
+.form-box {
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+ 
+.button-text {
+  font-size: 28px;
+}
   
+/* Cards */
   
-  /* Cards */
+.story-card {
+  width: 80%;
+  margin: 5% auto;
+  background-color: rgba(255,255,255,0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15); 
+  color: #000b12;
+  margin-top: 6rem;
+}
   
-  .story-card {
-    width: 80%;
-    margin: 5% auto;
-    background-color: rgba(255,255,255,0.8); /* Changer en fonction de votre préférence */
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.15); /* Changer en fonction de votre préférence */
-    color: #000b12;
-    margin-top: 6rem;
-  }
+.story-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin: 2% auto;
+  background-color: rgba(255,255,255,0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  color: #000000;
+}
   
-  .story-summary {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 60%;
-    margin: 2% auto;
-    background-color: rgba(255,255,255,0.8); /* Changer en fonction de votre préférence */
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.15); /* Changer en fonction de votre préférence */
-    color: #000000;
-  }
+.story-summary h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
   
-  .story-summary h2 {
-    font-size: 2rem; /* Ajustez en fonction de vos préférences */
-    margin-bottom: 1rem;
-  }
+.story-summary p {
+  color: #888;
+  margin-bottom: 1rem;
+  text-align: center;
+}
   
-  .story-summary p {
-    color: #888; /* Couleur du texte */
-    margin-bottom: 1rem;
-    text-align: center;
-  }
+.story-summary .delete-button {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #01588d;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+}
   
-  .story-summary .delete-button {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    background-color: #01588d; /* Couleur de fond du bouton */
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-  }
+.story-summary .delete-button:hover {
+  background-color: #72b3da;
+}
   
-  .story-summary .delete-button:hover {
-    background-color: #72b3da; /* Couleur de fond du bouton au survol */
-  }
+/* Footer */
   
+footer {
+  background-image: url('assets/footer_min.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 34vh;
+  bottom: 0;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
   
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
   
-  /* Footer */
+.main-content {
+  flex: 1;
+} 
   
-  footer {
-      background-image: url('assets/footer_min.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      height: 34vh;
-      bottom: 0;
-      text-align: center;
-      color: #fff; /* Couleur du texte */
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-    
-      }
+/* Mobile display */
   
-  .container {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh; 
-      }
+.navbar-nav {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
   
+/* Buttons */
   
-  
-  .main-content {
-    flex: 1;
-  } 
-  
-  /* Mobile display */
-  
-  /* .hamburger {
-    display: none;
-    color: #fff; 
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 100;
-  } */
-  
-  .navbar-nav {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  
-  
-  
-  /* Buttons */
-  
-  .device-home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 1rem;
-  }
+.device-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
 
 
-  .device-loginSubscribe {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 4rem;
-  }
+.device-loginSubscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 4rem;
+}
   
 
-  .newStory-nav-button {
-    display: none;
-    background-image: url(assets/buttons/yellow_button.png);
-    background-size: cover;
-    width: 396px;
-    height: 153px; 
-    font-family: 'Ruda-Bold', Fallback, sans-serif;
-    font-size: 3rem;
-    color: rgb(255, 255, 255); 
-    text-align: center;
-    line-height: 9rem; 
-    margin-top: 3.4rem;
-  }
+.newStory-nav-button {
+  display: none;
+  background-image: url(assets/buttons/yellow_button.png);
+  background-size: cover;
+  width: 396px;
+  height: 153px; 
+  font-family: 'Ruda-Bold', Fallback, sans-serif;
+  font-size: 3rem;
+  color: rgb(255, 255, 255); 
+  text-align: center;
+  line-height: 9rem; 
+  margin-top: 3.4rem;
+}
 
-  .newStory-nav-button:hover {
-    color: #d3eaf3; 
+.newStory-nav-button:hover {
+  color: #d3eaf3; 
 }
 
 .savedStories-nav-button {
@@ -443,103 +427,92 @@ body {
   color: #d3eaf3; 
 }
   
-  .signIn-nav-button {
-    display: none;
-    background-image: url(assets/buttons/blue_button.png);
-    background-size: cover;
-    width: 316px;
-    height: 122px;
-    font-family: 'Ruda-Bold', Fallback, sans-serif;
-    font-size: 3rem;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    line-height: 6.6rem;
-    margin-top: 3.4rem;
-  }
+.signIn-nav-button {
+  display: none;
+  background-image: url(assets/buttons/blue_button.png);
+  background-size: cover;
+  width: 316px;
+  height: 122px;
+  font-family: 'Ruda-Bold', Fallback, sans-serif;
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 6.6rem;
+  margin-top: 3.4rem;
+}
 
-  .signIn-nav-button:hover {
-    color: #d3eaf3; 
+.signIn-nav-button:hover {
+  color: #d3eaf3; 
 }
   
-  .signUp-nav-button {
-    display: none;
-    background-image: url(assets/buttons/purple_button.png);
-    background-size: cover; /* Assurez-vous que l'image couvre tout l'espace disponible */
-    width: 316px; /* Ajustez selon la taille souhaitée pour le bouton */
-    height: 122px; /* Ajustez selon la taille souhaitée pour le bouton */
-    font-family: 'Ruda-Bold', Fallback, sans-serif;
-    font-size: 3rem;
-    color: rgb(255, 255, 255); /* Ajustez selon la couleur de texte souhaitée */
-    text-align: center;
-    line-height: 6.6rem; /* Cela centrera verticalement le texte. Ajustez-le à la même valeur que la hauteur du bouton */
-    margin-top: 6rem;
+.signUp-nav-button {
+  display: none;
+  background-image: url(assets/buttons/purple_button.png);
+  background-size: cover;
+  width: 316px;
+  height: 122px;
+  font-family: 'Ruda-Bold', Fallback, sans-serif;
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 6.6rem;
+  margin-top: 6rem;
   }
 
-  .signUp-nav-button:hover {
-    color: #d3eaf3 ; /* Changez cette valeur par la couleur souhaitée lors du survol */
+.signUp-nav-button:hover {
+  color: #d3eaf3 ;
 }
   
-  .about-nav-button {
-    display: none;
-    background-image: url(assets/buttons/yellow_button.png);
-    background-size: cover; /* Assurez-vous que l'image couvre tout l'espace disponible */
-    width: 182px; /* Ajustez selon la taille souhaitée pour le bouton */
-    height: 71px; /* Ajustez selon la taille souhaitée pour le bouton */
-    font-family: 'Ruda-Bold', Fallback, sans-serif;
-    font-size: 2rem;
-    color: rgb(255, 255, 255); /* Ajustez selon la couleur de texte souhaitée */
-    text-align: center;
-    line-height: 4.4rem; /* Cela centrera verticalement le texte. Ajustez-le à la même valeur que la hauteur du bouton */
-    margin-top: 4rem;
-  }
-  
-  .about-nav-button:hover {
-    color: #d3eaf3; /* Changez cette valeur par la couleur souhaitée lors du survol */
+.about-nav-button {
+  display: none;
+  background-image: url(assets/buttons/yellow_button.png);
+  background-size: cover;
+  width: 182px;
+  height: 71px;
+  font-family: 'Ruda-Bold', Fallback, sans-serif;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 4.4rem;
+  margin-top: 4rem;
 }
   
-  @media screen and (max-width: 1100px) {
-    .navbar-nav {
-      display: none;
-    }
+.about-nav-button:hover {
+  color: #d3eaf3;
+}
   
-    /* .hamburger {
-      display: block;
-      background-color: rgba(0,0,0,0);
-      margin-left: 10rem;
-    } */
+@media screen and (max-width: 1100px) {
+.navbar-nav {
+  display: none;
+}
+
+.newStory-nav-button {
+  display: block;
+}
+
+.savedStories-nav-button {
+  display: block;
+}
+
+.myProfil-nav-button {
+  display: block;
+}
+
+.signIn-nav-button {
+  display: block;
+}
   
-    .newStory-nav-button {
-      display: block;
-    }
+.signUp-nav-button {
+  display: block;
+}
+.about-nav-button {
+  display: block;
+}
+}
 
-    .savedStories-nav-button {
-      display: block;
-    }
-
-    .myProfil-nav-button {
-      display: block;
-    }
-
-    .signIn-nav-button {
-      display: block;
-    }
+/* Fonts */
   
-    .signUp-nav-button {
-      display: block;
-    }
-    .about-nav-button {
-      display: block;
-    }
-  }
-
-  /* Fonts */
-  
-  @font-face {
-    font-family: 'Ruda-Bold';
-    src: font-url('Ruda-Bold.ttf') format('truetype');
-  }
-
-  .button-text {
-    font-size: 28px; /* Remplacez la valeur par la taille souhaitée */
-  }
-  
+@font-face {
+  font-family: 'Ruda-Bold';
+  src: font-url('Ruda-Bold.ttf') format('truetype');
+}

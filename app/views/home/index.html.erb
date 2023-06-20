@@ -16,6 +16,11 @@
       <%= t('my_profile') %>
       </div>
     <% end %> 
+    <%= link_to stories_path, style: "text-decoration: none;" do %>
+      <div class='storyPublic-nav-button'>
+      <%= t('story_public') %>
+      </div>
+    <% end %> 
 
 <% else %>
   <div class="device-loginSubscribe">
