@@ -1,5 +1,5 @@
 class AdminMailer < ApplicationMailer
-    default :from => ENV['MAILJET.DEFAULT_FROM']
+    default :from => ENV['MAILJET_DEFAULT_FROM']
 
     def confirmation_email(order)
         #on récupère l'instance order pour ensuite pouvoir la passer à la view en @user
