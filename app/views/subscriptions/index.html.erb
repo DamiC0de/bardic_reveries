@@ -1,33 +1,23 @@
 <div class="story-summary">
-<h2> 1 MONTH </h2>
-<h1> 1€ </h1>
-<%if user_signed_in?%>
-    <%if current_user.subscriptions.any?%>                  <!-- check if user has subscription -->
-        <% exp = current_user.subscriptions.all.sample %>
-        <% current_user.subscriptions.each do |sub|%>       <!-- check for expiration date (have to improve(find a way to return the higest expiration date instead of checking everysingle one of them)) -->
-            <% if sub.active? %>
-                <%if sub.expiration_date >= exp.expiration_date %>
-                    <%exp = sub%>
-                <%end%>
-            <%end%>
-        <%end%>
-        <div>
-        <%if exp.active?%>
-        add one Month to your current subscription 
-        <p> Time remaining of your subscription : 
-            <%= distance_of_time_in_words(Time.now,exp.expiration_date,options = {include_seconds: true})%></p> 
-        <%else%>
-            Your subscription expired <%= distance_of_time_in_words(exp.expiration_date,Time.now,options = {include_seconds: true})%> ago
-            <p> Start a 1 day subscription now! </p>
-        <%end%>
-        </div>
-    <%else%>
-        You aren't subscribed
-        <p> Start a 1 day subscription now! </p>
-    <%end%>
-    <%= link_to 'add time', 'add', method: :add, class: "button" %>
-<%else%>
-    <p>Sign in first if you want to Start a subscription </p>
-    <%= link_to 'Sign in', '/users/sign_in', method: :add, class: "button" %>
-<%end%> 
+    <h1>Choose your subscription plan</h1>
+    <% @subscription_plans.each do |plan| %>
+    <div>
+        <h2><%= plan.name %></h2>
+        <p><%= plan.description %></p>
+        <p>Price: <%= plan.cost %>€</p>
+
+        <%= form_for :subscription, url: subscriptions_path, html: {class: "subscription-form"}, method: :post do |f| %>
+        <%= f.hidden_field :subscription_plan_id, value: plan.id %>
+        <%= f.submit "Subscribe" %>
+        <% end %>
+    </div>
+    <% end %>
+
+    <% if @current_subscription %>
+    <h1>Your current subscription</h1>
+    <h2><%= @current_subscription.subscription_plan.name %></h2>
+    <p><%= @current_subscription.subscription_plan.description %></p>
+    <p>Price: <%= @current_subscription.subscription_plan.cost %>€</p>
+    <p>Expiration: <%= @current_subscription.expiration_date %></p>
+    <% end %>
 </div>

@@ -364,6 +364,7 @@ footer {
   margin: 0;
   padding: 0;
 }
+
   
 /* Buttons */
   
@@ -456,37 +457,37 @@ footer {
 .storyPublic-nav-button:hover {
   color: #4aa3b3; 
 }
-  
+
 .signIn-nav-button {
   display: none;
   background-image: url(assets/buttons/blue_button.png);
   background-size: cover;
-  width: 316px;
-  height: 122px;
+  width: 214px;
+  height: 82px;
   font-family: 'Ruda-Bold', Fallback, sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   color: rgb(255, 255, 255);
   text-align: center;
-  line-height: 6.6rem;
-  margin-top: 3.4rem;
+  line-height: 4.6rem;
 }
 
 .signIn-nav-button:hover {
   color: #d3eaf3; 
 }
   
+  
 .signUp-nav-button {
   display: none;
   background-image: url(assets/buttons/purple_button.png);
   background-size: cover;
-  width: 316px;
-  height: 122px;
+  width: 214px;
+  height: 82px;
   font-family: 'Ruda-Bold', Fallback, sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   color: rgb(255, 255, 255);
   text-align: center;
-  line-height: 6.6rem;
-  margin-top: 6rem;
+  line-height: 4.6rem;
+  margin-top: 2.4rem;
   }
 
 .signUp-nav-button:hover {
@@ -497,21 +498,33 @@ footer {
   display: none;
   background-image: url(assets/buttons/yellow_button.png);
   background-size: cover;
-  width: 182px;
-  height: 71px;
+  width: 156px;
+  height: 60px;
   font-family: 'Ruda-Bold', Fallback, sans-serif;
   font-size: 2rem;
   color: rgb(255, 255, 255);
   text-align: center;
-  line-height: 4.4rem;
-  margin-top: 4rem;
+  line-height: 3.6rem;
+  margin-top: 2.4rem;
 }
   
 .about-nav-button:hover {
   color: #d3eaf3;
 }
+
+// CSS for mobile display (Iphone 14 / 14 Pro )
+
+@media screen and (max-width: 393px) {
+
+.logo{
+  width: 12rem;
+  height: 2rem;
+}
+
+.navbar {
+  overflow: hidden;
+}
   
-@media screen and (max-width: 1100px) {
 .navbar-nav {
   display: none;
 }

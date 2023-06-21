@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_20_083550) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_21_145835) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -38,12 +38,23 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_20_083550) do
     t.index ["user_id"], name: "index_stories_on_user_id"
   end
 
+  create_table "subscription_plans", force: :cascade do |t|
+    t.string "name"
+    t.float "cost"
+    t.integer "duration"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "description"
+  end
+
   create_table "subscriptions", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.date "start_date", null: false
     t.date "expiration_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "subscription_plan_id", null: false
+    t.index ["subscription_plan_id"], name: "index_subscriptions_on_subscription_plan_id"
     t.index ["user_id"], name: "index_subscriptions_on_user_id"
   end
 
@@ -64,5 +75,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_20_083550) do
   add_foreign_key "orders", "subscriptions"
   add_foreign_key "orders", "users"
   add_foreign_key "stories", "users"
+  add_foreign_key "subscriptions", "subscription_plans"
   add_foreign_key "subscriptions", "users"
 end
