@@ -46,6 +46,10 @@ class StoriesController < ApplicationController
     
         redirect_to stories_path, notice: 'L\'histoire a été supprimée avec succès.'
       end  
+
+      def public_story
+        @stories = Story.all
+      end     
       
   
     private

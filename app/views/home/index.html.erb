@@ -1,5 +1,9 @@
 <% if user_signed_in? %>
-  <%= render @stories %>
+
+  <div class="stories-container">
+    <%= render @stories %>
+  </div>
+
   <div class="device-home">
   <%= link_to new_story_path, style: "text-decoration: none;" do %>
     <div class='newStory-nav-button'>
@@ -11,12 +15,12 @@
       <%= t('personnal_stories') %>
       </div>
     <% end %>    
-     <%= link_to stories_path, style: "text-decoration: none;" do %>
+     <%= link_to profile_path, style: "text-decoration: none;" do %>
       <div class='myProfil-nav-button'>
       <%= t('my_profile') %>
       </div>
     <% end %> 
-    <%= link_to stories_path, style: "text-decoration: none;" do %>
+    <%= link_to public_story_path , style: "text-decoration: none;" do %>
       <div class='storyPublic-nav-button'>
       <%= t('story_public') %>
       </div>

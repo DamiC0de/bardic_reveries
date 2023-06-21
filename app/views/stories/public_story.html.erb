@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+  <div class="public-story-container">
+    <%= render @stories %>
+  </div>
+<% else %>
+<%= redirect_to root_path %>
+<% end %>
