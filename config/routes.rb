@@ -12,4 +12,9 @@ Rails.application.routes.draw do
   get 'admin/dashboard'
   get 'public_story', to: 'stories#public_story', as: 'public_story'
 
+  # Stripe
+  post 'subscriptions/checkout', to: 'subscriptions#checkout', as: 'checkout_subscriptions'
+  post 'stripe_webhooks', to: 'subscriptions#stripe_webhooks'
+
+
 end
