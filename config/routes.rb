@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   post 'subscriptions/index'
   get 'subscriptions/add'
   post 'subscriptions/add'
+  post "stories/update"
 end

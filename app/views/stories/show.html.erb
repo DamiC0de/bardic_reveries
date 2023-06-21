@@ -1,4 +1,12 @@
 <div class="story-card">
   <h2 class="text-center"><%= @story.title %></h2>
   <p><%= @story.content %></p>
+  <p class="disabled"> Visibility: 
+    <%if @story.is_public%>
+      Public
+    <%else%>
+      Private
+    <%end%>
+  <%= link_to t('update_visibility'), story_path(@story), method: :update, data: { confirm: t('update_confirm') }, class: "update-button" %></p>
+  <%= link_to t('delete_story'), story_path(@story), method: :delete, data: { confirm: t('delete_confirm') }, class: "delete-button" %>
 </div>
