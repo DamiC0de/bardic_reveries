@@ -9,13 +9,14 @@ class SubscriptionsController < ApplicationController
   def checkout
     @subscription_plan = SubscriptionPlan.find(params[:subscription_plan_id])
     @session = Stripe::Checkout::Session.create(
+      customer: current_user.stripe_customer_id,
       payment_method_types: ['card'],
       line_items: [{
         price: @subscription_plan.stripe_price_id,
         quantity: 1,
       }],
       mode: 'payment', # Change 'subscription' to 'payment'
-      success_url: subscriptions_url(success: true),
+      success_url: subscriptions_url(success: true, host: request.host),
       cancel_url: subscriptions_url,
     )
     redirect_to @session.url, allow_other_host: true
