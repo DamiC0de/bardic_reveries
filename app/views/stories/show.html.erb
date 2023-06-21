@@ -1,7 +1,7 @@
 <div class="story-card">
   <h2 class="text-center"><%= @story.title %></h2>
   <p><%= @story.content %></p>
-  if current_user == @story.author
+    <%if current_user == @story.user%>
     <p class="disabled"> Visibility: 
       <%if @story.is_public%>
         Public
