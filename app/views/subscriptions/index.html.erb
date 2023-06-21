@@ -1,23 +1,66 @@
 <div class="story-summary">
-    <h1>Choose your subscription plan</h1>
-    <% @subscription_plans.each do |plan| %>
-    <div>
-        <h2><%= plan.name %></h2>
-        <p><%= plan.description %></p>
-        <p>Price: <%= plan.cost %>€</p>
+  <h1>Choose your subscription plan</h1>
+  <% @subscription_plans.each do |plan| %>
+  <div>
+    <h2><%= plan.name %></h2>
+    <p><%= plan.description %></p>
+    <p>Price: <%= plan.cost %>€</p>
 
-        <%= form_for :subscription, url: subscriptions_path, html: {class: "subscription-form"}, method: :post do |f| %>
-        <%= f.hidden_field :subscription_plan_id, value: plan.id %>
-        <%= f.submit "Subscribe" %>
-        <% end %>
-    </div>
-    <% end %>
+    <button
+      class="stripe-checkout-button"
+      data-stripe-price-id="<%= plan.stripe_price_id %>"
+      data-stripe-name="<%= plan.name %>"
+      data-stripe-description="<%= plan.description %>"
+    >
+    Subscribe
+    </button>
+  </div>
+  <% end %>
 
-    <% if @current_subscription %>
-    <h1>Your current subscription</h1>
-    <h2><%= @current_subscription.subscription_plan.name %></h2>
-    <p><%= @current_subscription.subscription_plan.description %></p>
-    <p>Price: <%= @current_subscription.subscription_plan.cost %>€</p>
-    <p>Expiration: <%= @current_subscription.expiration_date %></p>
-    <% end %>
+  <% if @current_subscription %>
+  <h1>Your current subscription</h1>
+  <h2><%= @current_subscription.subscription_plan.name %></h2>
+  <p><%= @current_subscription.subscription_plan.description %></p>
+  <p>Price: <%= @current_subscription.subscription_plan.cost %>€</p>
+  <p>Expiration: <%= @current_subscription.expiration_date %></p>
+  <% end %>
 </div>
+
+
+<script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1NLTmUBNllMt473iEfBPEUii"
+  publishable-key="pk_test_51NGQfxBNllMt473i34ZqXdmM9kl83mp2ZY3mTacpaafukEiVbSzJs31znQUI1RGHyyKPXIbc3tVudSMWKB50pROZ00K9pkMCQ8"
+>
+</stripe-buy-button>
+```
+
+<script>
+console.log("Stripe public key: " + '<%= ENV["STRIPE_PUBLIC_KEY"] %>');
+document.querySelectorAll('.stripe-checkout-button').forEach(button => {
+  button.addEventListener('click', event => {
+    console.log("Button clicked. Stripe price ID: " + button.dataset.stripePriceId);
+    var stripe = Stripe('<%= ENV["STRIPE_PUBLIC_KEY"] %>');
+    stripe.redirectToCheckout({
+      lineItems: [{
+        price: button.dataset.stripePriceId,
+        quantity: 1
+      }],
+      mode: 'subscription',
+      successUrl: window.location.origin + '/subscriptions/success?session_id={CHECKOUT_SESSION_ID}',
+      cancelUrl: window.location.origin + '/subscriptions/cancel',
+    }).then(function (result) {
+      console.log(result);
+      if (result.error) {
+        console.error("Stripe error: ", result.error);
+      }
+    });
+  });
+});
+</script>
+
+
+
