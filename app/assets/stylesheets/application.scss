@@ -241,6 +241,17 @@ body {
   display: flex;
   align-items: center;
 }
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.checkboxIsPublic {
+  width: 4rem !important;
+  padding: 6px !important;
+  height: 1.4rem !important;
+}
   
   
   
@@ -288,6 +299,20 @@ h2#profile {
   color: #000b12;
   margin-top: 6rem;
 }
+
+.story-card .delete-button {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #01588d;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+  
+.story-card .delete-button:hover {
+  background-color: #72b3da;
+}
   
 .story-summary {
   display: flex;
@@ -329,7 +354,8 @@ h2#profile {
 .story-summary .delete-button:hover {
   background-color: #72b3da;
 }
-  
+
+
 /* Footer */
   
 footer {
