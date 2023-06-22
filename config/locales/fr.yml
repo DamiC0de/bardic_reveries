@@ -23,5 +23,6 @@ fr:
   subscribed : "Abonnement en cours"
   time_remain : "Temps restant"
   public_story : "Partager histoire?"
+  subscription : "Abonnement"
 
    # <%=t('')%>.
