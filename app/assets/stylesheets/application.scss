@@ -671,6 +671,7 @@ h2#profile {
   justify-content: center;
   align-items: center;
   margin-left: 2rem;
+  margin-top: 1rem;
 }
 
 .field input {
@@ -692,7 +693,7 @@ h2#profile {
   display: flex;
   justify-content: center;
   margin-right: 1rem;
-  margin-top: 1.2rem;
+  margin-top: 3.2rem;
 }
 
 // Cards
@@ -773,12 +774,14 @@ footer{
   font-size: 12px;
 }
 
-
+}
 
 
 /*#############################################*/
 /*#             IPHONE 14/ 14PRO              #*/
 /*#############################################*/ 
+
+@media screen and (max-width: 375px) {
 
 .logo {
   width: 9.6rem;
@@ -807,7 +810,17 @@ footer{
   margin-top: 2rem;
 }
 
+.field {
+  margin-bottom: 0.4rem;
+}
 
+.field label {
+  margin-bottom: 0.1rem;
+}
+
+.actions {
+  margin-top: 0.18rem;
+}
 
 }
 
