@@ -1,7 +1,7 @@
 <div class="story-summary">
-  <%# <% flash.each do |message_type, message| %> %>
-    <%# <div class="alert alert-<%= message_type %>"><%= message %></div> %>
-  <%# <% end %> %>
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
 
   <h1><%= t("choose_your_subscription_plan") %></h1>
   <div class="subscriptions-container">
