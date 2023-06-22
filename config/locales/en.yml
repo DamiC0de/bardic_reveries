@@ -32,3 +32,8 @@ en:
   forgot_your_password : "Forgot your password?"
   choose_your_subscription_plan : "Choose your subscription plan"
   price : "Price"
+  current_subscription : "Your current subscription :"
+  subscription_plans:
+    daily: "Daily"
+    weekly: "Weekly"
+    monthly: "Monthly"

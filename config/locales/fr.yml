@@ -32,5 +32,10 @@ fr:
   forgot_your_password : "Mot de passe oublié?"
   choose_your_subscription_plan : "Choisis ton style d'abonnement"
   price : "Prix"
+  current_subscription : "Votre abonnement actuel :"
+  subscription_plans:
+    daily: "Quotidien"
+    weekly: "Hebdomadaire"
+    monthly: "Mensuel"
 
    # <%=t('')%>.

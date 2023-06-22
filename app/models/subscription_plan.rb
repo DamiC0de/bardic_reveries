@@ -2,7 +2,7 @@ class SubscriptionPlan < ApplicationRecord
     has_many :subscriptions
   
     PLANS = {
-      daily:   { cost: 2.0, duration: 1.day },
+     daily:   { cost: 2.0, duration: 1.day },
       weekly:  { cost: 10.0, duration: 7.days },
       monthly: { cost: 30.0, duration: 30.days }
     }.freeze

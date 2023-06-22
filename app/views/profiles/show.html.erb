@@ -1,4 +1,4 @@
-<h2 id="profile">Profile of <%if @user.pseudo%> <%=@user.pseudo%><%else%><%= @user.email %><%end%></h2>
+<h2 id="profile"><%= t('profile_of') %> <% if @user.pseudo %> <%= @user.pseudo %> <% else %> <%= @user.email %> <% end %></h2>
 <div class="form-container">
   <div class="form-box">
     <!-- User subscriptions infos -->

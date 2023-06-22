@@ -1,28 +1,34 @@
 <div class="story-summary">
-
   <% flash.each do |message_type, message| %>
     <div class="alert alert-<%= message_type %>"><%= message %></div>
   <% end %>
 
-  <h1><%= t('choose_your_subscription_plan') %></h1>
+  <h1><%= t("choose_your_subscription_plan") %></h1>
+  <table>
   <% @subscription_plans.each do |plan| %>
-  <div>
-    <h2><%= plan.name %></h2>
-    <p><%= plan.description %></p>
-    <p><%= t('price') %> <%= plan.cost %>€</p>
+    <td>
+      <div class="story-summary sub-menu">
+        <div>
+          <h2><%= t("subscription_plans.#{plan.name}", default: plan.name) %></h2>
+          <p><%= plan.description %></p>
+          <p><%= t("price") %>: <%= plan.cost %>€</p>
 
-    <%= form_tag checkout_subscriptions_path, method: :post do %>
-      <%= hidden_field_tag :subscription_plan_id, plan.id %>
-      <%= submit_tag "Subscribe", class: "stripe-checkout-button" %>
-    <% end %>
-  </div>
+          <%= form_tag checkout_subscriptions_path, method: :post do %>
+            <%= hidden_field_tag :subscription_plan_id, plan.id %>
+            <%= submit_tag t("subscriptions.subscribe"), class: "stripe-checkout-button" %>
+          <% end %>
+        </div>
+      </div>
+    </td>
   <% end %>
+  </table>
 
   <% if @current_subscription %>
-  <h1>Your current subscription</h1>
-  <h2><%= @current_subscription.subscription_plan.name %></h2>
-  <p><%= @current_subscription.subscription_plan.description %></p>
-  <p>Price: <%= @current_subscription.subscription_plan.cost %>€</p>
-  <p>Expiration: <%= @current_subscription.expiration_date %></p>
+    <div class="story-summary">
+      <h1><%= t("subscriptions.current_subscription") %>: <%= t("subscription_plans.#{@current_subscription.subscription_plan.name}", default: @current_subscription.subscription_plan.name) %></h1>
+      <p><%= @current_subscription.subscription_plan.description %></p>
+      <!--<p>Price: <%= @current_subscription.subscription_plan.cost %>€</p>-->
+      <p><%= t("subscriptions.expiration") %>: <%= distance_of_time_in_words(Time.now,@current_subscription.expiration_date) %> : <%=@current_subscription.expiration_date%></p>
+    </div>
   <% end %>
 </div>
