@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
     def index
         @stories = []
-        Story.all.each do |story|
+        Story.all.reverse_each do |story|
           if story.is_public
             @stories << story
           end
