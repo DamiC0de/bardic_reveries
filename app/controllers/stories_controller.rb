@@ -2,7 +2,7 @@ class StoriesController < ApplicationController
     before_action :authenticate_user!
 
     def index
-      @stories = current_user.stories
+      @stories = (current_user.stories).reverse
     end
       
   
