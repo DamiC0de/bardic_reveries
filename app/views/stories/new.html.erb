@@ -6,7 +6,7 @@
   <%= form_for @story, html: { class: 'form-box' } do |f| %>
     <div class="field">
       <%= f.label t('theme') %>
-      <%= f.select :theme, ["Fairy Tales", "Sci-Fi", "Dongeon and Dragons"], {}, { required: true } %>
+      <%= f.select :theme, ["Fairy Tales", "Sci-Fi", "Dongeon and Dragons"], { required: true } %>
     </div>
     
     <div class="field">

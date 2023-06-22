@@ -193,7 +193,7 @@ body {
 }
   
 .field input, .field select {
-  height: 2rem;
+  height: 1.5rem;
   border-radius: 1.2rem;
 }
   
@@ -663,9 +663,6 @@ h2#profile {
 }
 
 
-
-// Cards
-
 .form-container {
   display: flex;
   justify-content: center;
@@ -714,6 +711,15 @@ h2#profile {
   padding: 6px 14px;
 }
 
+.subscriptions-container{
+  margin-top: 1rem;
+
+}
+
+.subscription-plan {
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+}
 
 
 // Buttons
