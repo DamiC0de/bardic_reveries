@@ -573,7 +573,11 @@ footer {
   color: #d3eaf3;
 }
 
-// CSS for mobile display (Iphone 14 / 14 Pro )
+// CSS for mobile display
+
+/*#############################################*/
+/*#             IPHONE 14/ 14PRO              #*/
+/*#############################################*/ 
 
 @media screen and (max-width: 393px) {
 
@@ -652,7 +656,7 @@ h2#profile {
 
 .subscription-info {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
   font-size: 12px;
 }
 
@@ -769,7 +773,46 @@ footer{
   font-size: 12px;
 }
 
+
+
+
+/*#############################################*/
+/*#             IPHONE 14/ 14PRO              #*/
+/*#############################################*/ 
+
+.logo {
+  width: 9.6rem;
 }
+
+.newStory-nav-button {
+  width: 187px;
+  height: 73px;
+  line-height: 4.6rem;
+  margin-top: 1.2rem;
+}
+
+.savedStories-nav-button {
+  width: 151px;
+  height: 57px;
+  font-size: 1.1rem;
+  line-height: 3.6rem;
+  margin-top: 0.2rem;
+}
+
+.storyPublic-nav-button {
+  width: 151px;
+  height: 57px;
+  font-size: 1.1rem;
+  line-height: 3.6rem;
+  margin-top: 2rem;
+}
+
+
+
+}
+
+
+
 
 /* Fonts */
   
