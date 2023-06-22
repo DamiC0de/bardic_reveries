@@ -57,6 +57,11 @@ body {
   color: #007bff;
 }
 
+#dropmenu-list {
+  display: none;
+}
+
+
 /* logo */
 .logo {
   float: left;
@@ -359,6 +364,31 @@ h2#profile {
   background-color: #72b3da;
 }
 
+.subscriptions-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.subscription-plan {
+  display: flex;
+  background-color: #f5f7f9;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 4rem;
+  border-radius: 1rem;
+  height: 236px;
+  width: 242px;
+}
+
+.sub-menu {
+  min-width:150px;
+}
+
+
 
 /* Footer */
   
@@ -428,7 +458,8 @@ footer {
   color: rgb(255, 255, 255); 
   text-align: center;
   line-height: 5.6rem; 
-  margin-top: 1.4rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
 }
 
 .newStory-nav-button:hover {
@@ -446,7 +477,7 @@ footer {
   color: rgb(255, 255, 255); 
   text-align: center;
   line-height: 4.2rem; 
-  margin-top: 1.8rem;
+  margin-top: 2rem;
 }
 
 .savedStories-nav-button:hover {
@@ -482,7 +513,7 @@ footer {
   color: rgb(255, 255, 255); 
   text-align: center;
   line-height: 4.2rem; 
-  margin-top: 1.8rem;
+  margin-top: 4rem;
 }
 
 .storyPublic-nav-button:hover {
@@ -570,6 +601,38 @@ footer {
   display: none;
 }
 
+.dropdown-menu {
+  display: none;
+  position: fixed; /* Positionnement du menu par rapport à la fenêtre du navigateur */
+  right: 0; /* Menu déroulant positionné à droite */
+  top: 60px; /* Ajustez cette valeur pour positionner le menu déroulant sous le bouton */
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 1rem;
+  z-index: 1;
+}
+
+.dropdown-menu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  color: #007bff; 
+}
+
+.dropdown-menu a:active {
+  color: #007bff;
+}
+
+#dropmenu-list {
+  display: block;
+}
+
+
 .profile-mobile {
   display: block;
   margin-left: 0.6rem;
@@ -623,6 +686,8 @@ footer {
   padding: 6px 14px;
 }
 
+
+
 // Buttons
 
 .button-text {
@@ -674,10 +739,6 @@ footer {
 @font-face {
   font-family: 'Ruda-Bold';
   src: font-url('Ruda-Bold.ttf') format('truetype');
-}
-
-.sub-menu{
-  min-width:150px;
 }
 
 .stripe-checkout-button{

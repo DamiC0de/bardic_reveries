@@ -14,7 +14,16 @@
         end %>
       </li>       
   </ul>
-  <button class="profile-mobile"><i class="fa-solid fa-user"></i></button>
+  <button class="profile-mobile" id="profile-mobile-button">
+    <i class="fa-solid fa-user"></i>
+  </button>
+    <div id="dropdown-menu" class="dropdown-menu">
+      <ul id="dropmenu-list">
+        <li><%= link_to t('my_profile'), profile_path, class: ("active" if current_page?(stories_path)) %></li> 
+        <li><a href="#">Subscription</a></li>
+        <li><a href="#">Disconnect</a></li>
+      </ul>
+    </div>
 
   <ul class="navbar-nav">
   <% if user_signed_in? %>
