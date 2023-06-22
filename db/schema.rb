@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_22_093315) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_22_094855) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -35,6 +35,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_22_093315) do
     t.string "title"
     t.text "content"
     t.boolean "is_public", default: true
+    t.string "language", default: "en français"
     t.index ["user_id"], name: "index_stories_on_user_id"
   end
 

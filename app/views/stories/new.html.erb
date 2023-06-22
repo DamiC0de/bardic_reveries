@@ -31,9 +31,9 @@
   </div>
   
   <div class="field">
-  <%= f.label t('public_story') %>
-  <%= f.check_box :is_public  %>
-</div>
+    <%= f.label t('language') %>
+    <%= f.select :language, ["En Français", "in english"], { required: true } %>
+  </div>
 
     <div class="actions">
       <%= f.submit "Generate History", class: 'submit-button' %>
