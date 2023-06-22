@@ -11,6 +11,7 @@ class StoriesController < ApplicationController
     end
   
     def create
+      if current_user.subscribed?
         @story = current_user.stories.new(story_params)
         @story.content = @story.generate_content
         if @story.save
@@ -18,7 +19,12 @@ class StoriesController < ApplicationController
         else
           render 'new'
         end
+      else
+        flash[:error] = "Vous devez être abonné pour accéder aux stories."
+        redirect_to subscriptions_path
       end
+    end
+    
       
   
     def show
