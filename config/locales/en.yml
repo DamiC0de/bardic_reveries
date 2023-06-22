@@ -29,3 +29,6 @@ en:
   subscription : "Subscription"
   generate_story : "Generate story"
   remember_me : "Remember me"
+  forgot_your_password : "Forgot your password?"
+  choose_your_subscription_plan : "Choose your subscription plan"
+  price : "Price"

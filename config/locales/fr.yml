@@ -29,5 +29,8 @@ fr:
   subscription : "Abonnement"
   generate_story : "Générer l'histoire"
   remember_me : "Se souvenir de moi"
+  forgot_your_password : "Mot de passe oublié?"
+  choose_your_subscription_plan : "Choisis ton style d'abonnement"
+  price : "Prix"
 
    # <%=t('')%>.
