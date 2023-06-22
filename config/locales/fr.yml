@@ -1,4 +1,3 @@
-fr:
   new_story: "Nouvelle histoire"
   personnal_stories: "Mes histoires"
   my_profile : "Mon profil"
@@ -23,6 +22,7 @@ fr:
   subscribed : "Abonnement en cours"
   time_remain : "Temps restant"
   public_story : "Partager histoire?"
+  language: "Choix de la langue"
   subscription : "Abonnement"
 
    # <%=t('')%>.

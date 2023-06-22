@@ -32,11 +32,12 @@
   
   <div class="field">
     <%= f.label t('language') %>
-    <%= f.select :language, ["En Français", "in english"], { required: true } %>
+    <%= f.select :language, ["En Français", "En Anglais"], { required: true } %>
+
   </div>
 
-    <div class="actions">
-      <%= f.submit "Generate History", class: 'submit-button' %>
-    </div>
+  <div class="actions">
+    <%= f.submit "Generate History", class: 'submit-button' %>
+  </div>
   <% end %>
 </div>
