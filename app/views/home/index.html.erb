@@ -26,17 +26,17 @@
   <div class="device-loginSubscribe">
     <%= link_to new_user_session_path, style: "text-decoration: none;" do %>
       <div class='signIn-nav-button'>
-        Sign In
+      <%=t('login')%>
       </div>
     <% end %>
     <%= link_to new_user_registration_path, style: "text-decoration: none;" do %>
       <div class='signUp-nav-button'>
-        Sign Up
+      <%=t('subscribe')%>
       </div>
     <% end %>
     <%= link_to root_path, style: "text-decoration: none;" do %>
       <div class='about-nav-button'>
-        About
+      <%=t('about')%>
       </div>
     <% end %>    
   </div>
