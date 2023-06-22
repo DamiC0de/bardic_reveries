@@ -1,5 +1,5 @@
 require 'rest_client'
-
+require 'obscenity'
 class Story < ApplicationRecord
     belongs_to :user
     
@@ -62,6 +62,8 @@ class Story < ApplicationRecord
 
       
     def generate_openai_input
-        "Raconte moi une histoire pour un enfant de #{age} ans dont le thème est #{theme}, le personnage principal s'appelle #{first_character}, le personnage secondaire s'appelle #{secondary_character} et son objet fétiche s'appelle #{fav_object}. Commence par le titre de l'histoire."
+      print first_character
+      print "Raconte moi une histoire pour un enfant de #{age} ans dont le thème est #{theme}, le personnage principal s'appelle #{Obscenity.sanitize(first_character)}, le personnage secondaire s'appelle #{Obscenity.sanitize(secondary_character)} et son objet fétiche s'appelle #{Obscenity.sanitize(fav_object)}. Commence par le titre de l'histoire."
+        "Raconte moi une histoire pour un enfant de #{age} ans dont le thème est #{theme}, le personnage principal s'appelle #{Obscenity.sanitize(first_character)}, le personnage secondaire s'appelle #{Obscenity.sanitize(secondary_character)} et son objet fétiche s'appelle #{Obscenity.sanitize(fav_object)}. Commence par le titre de l'histoire."
     end
   end

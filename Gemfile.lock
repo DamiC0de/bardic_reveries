@@ -162,6 +162,7 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.2-x86_64-linux)
       racc (~> 1.4)
+    obscenity (1.0.2)
     openai (0.3.0)
     orm_adapter (0.5.0)
     pg (1.5.3)
@@ -285,6 +286,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   letter_opener
+  obscenity
   openai
   pg (~> 1.1)
   puma (~> 5.0)
