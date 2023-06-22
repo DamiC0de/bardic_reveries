@@ -2,13 +2,12 @@
   <h2 class="text-center"><%= @story.title %></h2>
   <p><%= @story.content %></p>
     <%if current_user == @story.user%>
-    <p class="disabled"> Visibility: 
-      <%if @story.is_public%>
-        Public
-      <%else%>
-        Private
-      <%end%>
-    <%= link_to t('update_visibility'), story_path(@story), method: :update, data: { confirm: t('update_confirm') }, class: "update-button" %></p>
+    <%= form_for @story, url: story_path(@story), method: :patch do |f| %>
+      <div class="field">
+        <%= f.check_box :is_public, onchange: 'this.form.submit()' %>
+        <%= f.label :is_public, "Public" %>
+      </div>
+    <% end %>
     <%= link_to t('delete_story'), story_path(@story), method: :delete, data: { confirm: t('delete_confirm') }, class: "delete-button" %>
   <%end%>
 </div>

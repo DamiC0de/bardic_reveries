@@ -27,18 +27,14 @@ class StoriesController < ApplicationController
     end
 
     def update
-        @story = Story.find(params[:id])
-        if @story.update(story_params)
-          if @story.is_public
-            @story.update(is_public:false)
-          else
-            @story.update(is_public:true)
-          end
+      @story = Story.find(params[:id])
+      if @story.update(is_public: !@story.is_public)
           redirect_to stories_path, notice: 'Votre histoire a été enregistrée avec succès.'
-        else
+      else
           render :show
-        end
       end
+    end
+  
 
       def destroy
         @story = Story.find(params[:id])
