@@ -38,4 +38,6 @@ fr:
     weekly: "Hebdomadaire"
     monthly: "Mensuel"
 
+  about : "À propos"
+
    # <%=t('')%>.
