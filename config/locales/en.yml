@@ -23,4 +23,8 @@ en:
   subscribed : "Currently subscribed"
   time_remain : "Time remain"
   public_story : "Share story?"
+  language: "Language selection"
+  language_selection_uk : "English"
+  language_selection_fr : "French"
   subscription : "Subscription"
+  generate_story : "Generate story"

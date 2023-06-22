@@ -1,3 +1,4 @@
+fr:  
   new_story: "Nouvelle histoire"
   personnal_stories: "Mes histoires"
   my_profile : "Mon profil"
@@ -23,6 +24,9 @@
   time_remain : "Temps restant"
   public_story : "Partager histoire?"
   language: "Choix de la langue"
+  language_selection_fr : "Français"
+  language_selection_uk : "Anglais"
   subscription : "Abonnement"
+  generate_story : "Générer l'histoire"
 
    # <%=t('')%>.
