@@ -15,7 +15,7 @@
 
           <%= form_tag checkout_subscriptions_path, method: :post do %>
             <%= hidden_field_tag :subscription_plan_id, plan.id %>
-            <%= submit_tag t("subscriptions.subscribe"), class: "stripe-checkout-button" %>
+            <%= submit_tag t("subscribe"), class: "stripe-checkout-button" %>
           <% end %>
         </div>
       </div>
