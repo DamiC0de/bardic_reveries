@@ -12,26 +12,27 @@
         <%= link_to_unless_current("", {locale: :fr}, {id: "fr", class: "flag"}) do
           content_tag(:a, "", id: "fr", class: "flag")
         end %>
-      </li>      
-      
+      </li>       
   </ul>
-<ul class="navbar-nav">
-<% if user_signed_in? %>
-    <%if current_user.is_admin %>
-      <li><%= link_to "AdminDashboard", "/admin/dashboard", class: ("active" if current_page?(new_story_path)) %></li>                  <!--have to had path-->
-    <%end%> 
-    <li><%= link_to t('new_story'), new_story_path, class: ("active" if current_page?(new_story_path)) %></li>
-    <li><%= link_to t('personnal_stories'), stories_path, class: ("active" if current_page?(stories_path)) %></li> 
-    <li><%= link_to t('my_profile'), profile_path, class: ("active" if current_page?(profile_path)) %></li>
-    <li><%= link_to t('subscriptions'), subscriptions_path, class: ("active" if current_page?(subscriptions_path)) %></li>           <!--have to had path--> 
+  <button class="profile-mobile"><i class="fa-solid fa-user"></i></button>
 
-    <li><%= link_to t('disconnect'), destroy_user_session_path, method: :get %></li>
-    
-  <% else %>
-    <li><%= link_to t('login'), new_user_session_path, class: ("active" if current_page?(new_user_session_path)) %></li>
-    <li><%= link_to t('subscribe'), new_user_registration_path, class: ("active" if current_page?(new_user_registration_path)) %></li>
-  <% end %>
-</ul>
-  <%# <button class="hamburger" id="hamburger"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></button> %>
+  <ul class="navbar-nav">
+  <% if user_signed_in? %>
+      <%if current_user.is_admin %>
+        <li><%= link_to "AdminDashboard", "/admin/dashboard", class: ("active" if current_page?(new_story_path)) %></li>                  <!--have to had path-->
+      <%end%> 
+      <li><%= link_to t('new_story'), new_story_path, class: ("active" if current_page?(new_story_path)) %></li>
+      <li><%= link_to t('personnal_stories'), stories_path, class: ("active" if current_page?(stories_path)) %></li> 
+      <li><%= link_to t('my_profile'), profile_path, class: ("active" if current_page?(profile_path)) %></li>
+      <li><%= link_to t('subscriptions'), subscriptions_path, class: ("active" if current_page?(subscriptions_path)) %></li>           <!--have to had path--> 
+
+      <li><%= link_to t('disconnect'), destroy_user_session_path, method: :get %></li>
+      
+    <% else %>
+      <li><%= link_to t('login'), new_user_session_path, class: ("active" if current_page?(new_user_session_path)) %></li>
+      <li><%= link_to t('subscribe'), new_user_registration_path, class: ("active" if current_page?(new_user_registration_path)) %></li>
+    <% end %>
+  </ul>
+    <%# <button class="hamburger" id="hamburger"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></button> %>
 
 </nav>

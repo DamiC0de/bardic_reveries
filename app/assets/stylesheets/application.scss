@@ -113,6 +113,10 @@ body {
 #fr:hover {
   background-image: url('assets/icons/fr-hover.png');
 }
+
+.profile-mobile {
+  display: none;
+}
       
 
 /* Loading */
@@ -544,8 +548,18 @@ footer {
 @media screen and (max-width: 393px) {
 
 .logo{
-  width: 12rem;
+  width: 10rem;
   height: 2rem;
+  margin-left: 1.2rem;
+}
+
+#uk{
+  margin-left: 2.2rem;
+
+}
+
+#fr{
+  margin-right: 2.2rem;
 }
 
 .navbar {
@@ -554,6 +568,11 @@ footer {
   
 .navbar-nav {
   display: none;
+}
+
+.profile-mobile {
+  display: block;
+  margin-left: 0.6rem;
 }
 
 .form-container {
