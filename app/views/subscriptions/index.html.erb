@@ -31,4 +31,6 @@
       <p><%= t("subscriptions.expiration") %>: <%= distance_of_time_in_words(Time.now,@current_subscription.expiration_date) %> : <%=@current_subscription.expiration_date%></p>
     </div>
   <% end %>
+  </table>
 </div>
+
