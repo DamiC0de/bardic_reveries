@@ -20,12 +20,37 @@ class SubscriptionsController < ApplicationController
         success_url: subscriptions_url(success: true, host: request.host),
         cancel_url: subscriptions_url,
       )
-      redirect_to @session.url, allow_other_host: true
+      
+      # Création de la nouvelle souscription
+      subscription = Subscription.new(
+        user: current_user, 
+        subscription_plan: @subscription_plan, 
+        start_date: Time.now, 
+        expiration_date: Time.now + @subscription_plan.duration.days
+      )
+      
+      if subscription.save
+        # Création de la nouvelle commande
+        order = Order.create(user: current_user, subscription: subscription)
+        if order.save
+          redirect_to @session.url, allow_other_host: true
+        else
+          # Log de l'erreur
+          Rails.logger.error "Échec de la création de la commande : #{order.errors.full_messages.join(", ")}"
+          redirect_to subscriptions_path, alert: "Une erreur s'est produite lors de la création de la commande."
+        end
+      else
+        # Log de l'erreur
+        Rails.logger.error "Échec de la création de la souscription : #{subscription.errors.full_messages.join(", ")}"
+        redirect_to subscriptions_path, alert: "Une erreur s'est produite lors de la création de l'abonnement."
+      end
+      
     rescue Stripe::StripeError => e
       flash[:error] = e.message
       redirect_to subscriptions_path
     end
   end
+  
   
   def webhook
     payload = request.body.read

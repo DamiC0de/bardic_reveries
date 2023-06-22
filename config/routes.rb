@@ -16,5 +16,4 @@ Rails.application.routes.draw do
   post 'subscriptions/checkout', to: 'subscriptions#checkout', as: 'checkout_subscriptions'
   post 'stripe_webhooks', to: 'subscriptions#stripe_webhooks'
 
-
 end
