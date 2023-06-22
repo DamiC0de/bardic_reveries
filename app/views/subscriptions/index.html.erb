@@ -5,24 +5,27 @@
   <% end %>
 
   <h1>Choose your subscription plan</h1>
+  <table>
   <% @subscription_plans.each do |plan| %>
-  <div>
-    <h2><%= plan.name %></h2>
-    <p><%= plan.description %></p>
-    <p>Price: <%= plan.cost %>€</p>
+    <td><div class="story-summary">
+      <div>
+        <h2><%= plan.name %></h2>
+        <p><%= plan.description %></p>
+        <p>Price: <%= plan.cost %>€</p>
 
-    <%= form_tag checkout_subscriptions_path, method: :post do %>
-      <%= hidden_field_tag :subscription_plan_id, plan.id %>
-      <%= submit_tag "Subscribe", class: "stripe-checkout-button" %>
-    <% end %>
-  </div>
-  <% end %>
+        <%= form_tag checkout_subscriptions_path, method: :post do %>
+        <%= hidden_field_tag :subscription_plan_id, plan.id %>
+        <%= submit_tag "Subscribe", class: "stripe-checkout-button" %>
+        <% end %>
+      </div>
+    </td></div>
+  <%end%>
 
   <% if @current_subscription %>
-  <h1>Your current subscription</h1>
-  <h2><%= @current_subscription.subscription_plan.name %></h2>
-  <p><%= @current_subscription.subscription_plan.description %></p>
-  <p>Price: <%= @current_subscription.subscription_plan.cost %>€</p>
-  <p>Expiration: <%= @current_subscription.expiration_date %></p>
+    <h1>Your current subscription: <%= @current_subscription.subscription_plan.name %></h1>
+    <p><%= @current_subscription.subscription_plan.description %></p>
+    <!--<p>Price: <%= @current_subscription.subscription_plan.cost %>€</p>-->
+    <p>Expiration: <%= distance_of_time_in_words(Time.now,@current_subscription.expiration_date) %> : <%=@current_subscription.expiration_date%></p>
   <% end %>
+  </table>
 </div>
