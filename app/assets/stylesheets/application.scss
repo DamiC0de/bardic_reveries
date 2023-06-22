@@ -638,6 +638,34 @@ footer {
   margin-left: 0.6rem;
 }
 
+// Text
+
+h2#profile {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-box {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 1rem;
+}
+
+.subscription-info {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 12px;
+}
+
+.field input, .field select {
+  height: 0.4rem;
+  border-radius: 0.8rem;
+}
+
+
+
+// Cards
+
 .form-container {
   display: flex;
   justify-content: center;
@@ -730,6 +758,10 @@ footer {
 
 .public-story-container{
   display: block;
+}
+
+footer{
+  font-size: 12px;
 }
 
 }
