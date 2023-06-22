@@ -675,3 +675,25 @@ footer {
   font-family: 'Ruda-Bold';
   src: font-url('Ruda-Bold.ttf') format('truetype');
 }
+
+.sub-menu{
+  min-width:150px;
+}
+
+.stripe-checkout-button{
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color:white;
+  background-color: #007BFF;
+  border-color: #007BFF;
+}
+.stripe-checkout-button:hover{
+  background-color: #01588d;
+}

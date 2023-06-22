@@ -6,9 +6,11 @@
 
   <h1><%= t('choose_your_subscription_plan') %></h1>
   <% @subscription_plans.each do |plan| %>
-  <div>
-    <h2><%= plan.name %></h2>
-    <p><%= plan.description %></p>
+    <td><div class="story-summary sub-menu">
+      <div>
+        <h2><%= plan.name %></h2>
+        <p><%= plan.description %></p>
+
     <p><%= t('price') %> <%= plan.cost %>€</p>
 
     <%= form_tag checkout_subscriptions_path, method: :post do %>
