@@ -10,8 +10,8 @@
       <div>
         <h2><%= plan.name %></h2>
         <p><%= plan.description %></p>
-
-    <p><%= t('price') %> <%= plan.cost %>€</p>
+        <p><%= t('price') %> <%= plan.cost %>€</p>
+      </div>
 
     <%= form_tag checkout_subscriptions_path, method: :post do %>
       <%= hidden_field_tag :subscription_plan_id, plan.id %>
