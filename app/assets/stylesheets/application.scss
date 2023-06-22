@@ -725,6 +725,10 @@ h2#profile {
   margin-bottom: 1rem;
 }
 
+.story-card {
+  width: 80%;
+}
+
 
 // Buttons
 
@@ -809,6 +813,15 @@ footer{
   line-height: 3.6rem;
   margin-top: 2rem;
 }
+
+.story-card {
+  width: 70%;
+}
+
+.story-card .delete-button {
+  margin-top: 1rem;
+}
+
 
 .field {
   margin-bottom: 0.4rem;
