@@ -1,4 +1,4 @@
-<h2 id="login">Log in</h2>
+<h2 id="login"><%= t('login') %></h2>
 <div class="form-container">
   <div class="form-box">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -8,7 +8,7 @@
       </div>
 
       <div class="field">
-        <%= f.label :password %>
+        <%= f.label t('password') %>
         <%= f.password_field :password, autocomplete: "current-password" %>
       </div>
 
@@ -17,12 +17,12 @@
             <div class="puce-remember">
               <%= f.check_box :remember_me %>
             </div>
-          <%= f.label :remember_me %>
+          <%= f.label t('remember_me') %>
         </div>
       <% end %>
 
       <div class="actions">
-        <%= f.submit "Log in" %>
+        <%= f.submit t('login') %>
       </div>
     <% end %>
 

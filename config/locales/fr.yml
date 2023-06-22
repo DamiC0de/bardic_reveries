@@ -28,5 +28,6 @@ fr:
   language_selection_uk : "Anglais"
   subscription : "Abonnement"
   generate_story : "Générer l'histoire"
+  remember_me : "Se souvenir de moi"
 
    # <%=t('')%>.
