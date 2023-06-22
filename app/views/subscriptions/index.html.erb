@@ -1,4 +1,9 @@
 <div class="story-summary">
+
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
+
   <h1>Choose your subscription plan</h1>
   <% @subscription_plans.each do |plan| %>
   <div>
