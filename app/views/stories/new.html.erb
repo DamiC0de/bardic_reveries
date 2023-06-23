@@ -26,17 +26,17 @@
     </div>
 
     <div class="field">
-    <%= f.label t('fav_object') %>
-    <%= f.text_field :fav_object, required: true, pattern: "[^0-9]*" %>
-  </div>
+      <%= f.label t('fav_object') %>
+      <%= f.text_field :fav_object, required: true, pattern: "[^0-9]*" %>
+    </div>
   
-  <div class="field">
-  <%= f.label t('language') %>
-  <%= f.select :language, [t('language_selection_fr'), t('language_selection_uk')], { required: true } %>
-</div>
+    <div class="field">
+      <%= f.label t('language') %>
+      <%= f.select :language, [t('language_selection_fr'), t('language_selection_uk')], { required: true } %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit t('generate_story'), class: 'submit-button' %>
-  </div>
+    <div class="actions">
+      <%= f.submit t('generate_story'), class: 'submit-button' %>
+    </div>
   <% end %>
 </div>

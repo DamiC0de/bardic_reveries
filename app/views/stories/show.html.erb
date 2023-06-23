@@ -1,7 +1,7 @@
 <div class="story-card">
   <h2 class="text-center"><%= @story.title %></h2>
   <p><%= @story.content %></p>
-    <%if current_user == @story.user%>
+  <%if current_user == @story.user%>
     <%= form_for @story, url: story_path(@story), method: :patch do |f| %>
       <div class="field align-center">
         <%= f.label :is_public, "Public" %>

@@ -1,27 +1,26 @@
-<%= render'layouts/head'%>
-<body>
-  <div class="container">
-    <div class="main-content">
-      <header>
-        <%= render 'layouts/navbar'%>
-      </header>
-      <main> 
-        <%= yield %>
-      </main>
+
+  <%= render'layouts/head'%>
+  <body>
+    <div class="container">
+
+      <div class="main-content">
+        <header>
+          <%= render 'layouts/navbar'%>
+        </header>
+        <main> 
+          <%= yield %>
+        </main>
+      </div>
+
+      <footer>
+        <%= render'layouts/footer'%>
+      </footer>  
+
     </div>
-    <footer>
-      <%= render'layouts/footer'%>
-    </footer>  
-  </div>
-
-  
-
-  <%= javascript_include_tag 'manifest', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'profileNav', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'loadingStory', 'data-turbolinks-track': 'reload' %>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <script src="https://kit.fontawesome.com/b594f069a9.js" crossorigin="anonymous"></script>
-
-
-</body>
+    <%= javascript_include_tag 'manifest', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'profileNav', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'loadingStory', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/b594f069a9.js" crossorigin="anonymous"></script>
+  </body>
 </html>
