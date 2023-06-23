@@ -3,7 +3,7 @@
 
 # 1. Présentation 📚🎭💫
 
-**"Rêveries d'Aèdes"** est une application de création d'histoires personnalisées pour enfants, basée sur l'API de GPT. Elle crée des histoires adaptées aux préférences et à l'âge de chaque enfant, stimulant son imagination tout en offrant un divertissement éducatif.
+**"Bardic Reveries"** est une application de création d'histoires personnalisées pour enfants, basée sur l'API de GPT. Elle crée des histoires adaptées aux préférences et à l'âge de chaque enfant, stimulant son imagination tout en offrant un divertissement éducatif.
 
 ## 2.  Expérience utilisateur 🗺️
 
