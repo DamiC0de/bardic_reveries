@@ -49,8 +49,7 @@ class SubscriptionsController < ApplicationController
       flash[:error] = e.message
       redirect_to subscriptions_path
     end
-  end
-  
+  end 
   
   def webhook
     payload = request.body.read

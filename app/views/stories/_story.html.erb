@@ -4,14 +4,16 @@
   </h2>
   <table>
     <td>
-    <p><%=t('creation_story')%> <%= story.created_at.to_date %><%if (story.user).pseudo %> by <%=(story.user).pseudo%> <%end%></p>
-  </td>
-  <td>
-    <% if story.language == "en français" or story.language == "En français"%> <div id="fr"></div><%else%>
-    <% if story.language == "in english" %> <div id="uk"></div><%end%><%end%>
-  </td>
-    </table>
-  <% if current_user == story.user %>
-  <%= link_to t('delete_story'), story_path(story), method: :delete, data: { confirm: t('delete_confirm') }, class: "delete-button" %>
+      <p><%=t('creation_story')%> <%= story.created_at.to_date %><%if (story.user).pseudo %> by <%=(story.user).pseudo%> <%end%></p>
+    </td>
+    <td>
+      <% if story.language == "en français" or story.language == "En français"%> <div id="fr"></div> 
+      <%else%>
+        <% if story.language == "in english" %> <div id="uk"></div><%end%>
+      <%end%>
+    </td>
+  </table>
+  <% if current_user == story.user or current_user.is_admin%>
+    <%= link_to t('delete_story'), story_path(story), method: :delete, data: { confirm: t('delete_confirm') }, class: "delete-button" %>
   <%end%>
-  </div>
+</div>

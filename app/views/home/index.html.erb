@@ -5,42 +5,48 @@
   </div>
 
   <div class="device-home">
-  <%= link_to new_story_path, style: "text-decoration: none;" do %>
-    <div class='newStory-nav-button'>
-      <span class="button-text"><%= t('new_story') %></span>
-    </div>
-  <% end %>
-     <%= link_to stories_path, style: "text-decoration: none;" do %>
+    <%= link_to new_story_path, style: "text-decoration: none;" do %>
+      <div class='newStory-nav-button'>
+        <span class="button-text"><%= t('new_story') %></span>
+      </div>
+    <% end %>
+
+    <%= link_to stories_path, style: "text-decoration: none;" do %>
       <div class='savedStories-nav-button'>
-      <%= t('personnal_stories') %>
+        <%= t('personnal_stories') %>
       </div>
     <% end %>    
 
     <%= link_to public_story_path , style: "text-decoration: none;" do %>
       <div class='storyPublic-nav-button'>
-      <%= t('story_public') %>
+        <%= t('story_public') %>
       </div>
-    <% end %> 
+    <% end %>
+  </div> 
 
 <% else %>
+
   <div class="device-loginSubscribe">
+  
     <%= link_to new_user_session_path, style: "text-decoration: none;" do %>
       <div class='signIn-nav-button'>
-      <%=t('login')%>
+        <%=t('login')%>
       </div>
     <% end %>
+
     <%= link_to new_user_registration_path, style: "text-decoration: none;" do %>
       <div class='signUp-nav-button'>
-      <%=t('subscribe')%>
+        <%=t('subscribe')%>
       </div>
     <% end %>
+
     <%= link_to root_path, style: "text-decoration: none;" do %>
       <div class='about-nav-button'>
-      <%=t('about')%>
+        <%=t('about')%>
       </div>
-    <% end %>    
-  </div>
+    <% end %>
 
+  </div>
 <% end %>
 
 
