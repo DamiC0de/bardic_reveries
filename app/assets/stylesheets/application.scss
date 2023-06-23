@@ -26,7 +26,8 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: #00121f;
-  padding: 1rem 4rem 1rem 0;
+  padding: 0.4rem 2rem 0.4rem 0;
+  font-size: 22px;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   font-size: large;
@@ -79,7 +80,7 @@ body {
   justify-content: center;
   align-items: center;
   list-style-type: none;
-  margin: 0;
+  margin-left: 55rem;
   padding: 0;
 }
 
