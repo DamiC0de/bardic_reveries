@@ -930,3 +930,16 @@ footer{
 .stripe-checkout-button:hover{
   background-color: #01588d;
 }
+
+.table-users{
+  background-color:#021e33;
+}
+.table-order{
+  color: #021e33;
+  background-color: white;
+}
+.table-admin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
