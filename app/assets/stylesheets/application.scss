@@ -593,6 +593,17 @@ footer {
 
 @media screen and (max-width: 1440px) {
 
+.logo {
+  margin-top: 0.5rem;
+  width: 15rem;
+  height: 2rem;
+}
+
+.navbar {
+  font-size: 16px;
+  padding: 0.3rem 1rem 0.2rem 0;
+} 
+
 // Cards
 
 h2#subscription-plan-name {
@@ -602,6 +613,8 @@ h2#subscription-plan-name {
 .subscription-plan {
   width: 217px;
 }
+
+
 
 }
 
