@@ -1,0 +1,44 @@
+
+<table class="table-admin">
+  <tr>
+    <td>Name</td>       
+    <td>Email</td>
+    <td>Time</td>
+    <td>Type</td>
+  </tr>
+  <% User.all.each do |user|%>
+    <tr class="table-users">
+      <td>
+        <p><%=user.pseudo%></td> 
+        <td><%if user.subscribed?%><%else%>Not<%end%> subscribed</td>  
+        <td><%if user.subscriptions.any?%>
+          <% date_of_expiration = (user.subscriptions).maximum(:expiration_date) %>
+          <% exp = user.subscriptions.find_by(expiration_date:date_of_expiration)%>
+          <%if exp.active?%>
+            - <%=t('time_remain')%>  : 
+            <%= distance_of_time_in_words(Time.now,exp.expiration_date,options = {include_seconds: true})%>    
+          <%else%>
+            Your subscription expired <%= distance_of_time_in_words(exp.expiration_date,Time.now,options = {include_seconds: true})%> ago
+          <%end%>
+        </td>
+        <td><%exp.subscription_plan%></td>
+        <%end%></p>
+    </tr>
+    <% user.orders.each do |order|%>
+      <tr class="table-order">
+        <td>
+          <p>Date of order</p>
+        </td>
+        <td>
+          <p><%=order.created_at%></p>
+        </td>
+        <td>
+          <p>Duration</p>
+        </td>
+        <td>
+          <p><%= distance_of_time_in_words(order.subscription.start_date,order.subscription.expiration_date,options = {include_seconds: true})%> </p>
+        </td>
+      </tr>
+    <%end%>
+  <%end%>
+</table>
