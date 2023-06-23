@@ -9,7 +9,7 @@
     <% @subscription_plans.each do |plan| %>
       <div class="subscription-plan">
         <h2><%= t("subscription_plans.#{plan.name}", default: plan.name) %></h2>
-        <p><%= plan.description %></p>
+        <%# <p><%= plan.description %>
         <p><%= t("price") %>: <%= plan.cost %>€</p>
 
         <%= form_tag checkout_subscriptions_path, method: :post do %>
