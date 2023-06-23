@@ -6,7 +6,7 @@
       <% if current_user.subscribed?%>  
       <%=t('subscribed')%>
       <% else %>
-      Not subscribed
+      <%=t('not_subscribed')%>
       <%end %>
       <%if current_user.subscriptions.any?%>
           <% exp = current_user.subscriptions.all.sample %>

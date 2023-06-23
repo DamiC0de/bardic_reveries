@@ -39,5 +39,6 @@ fr:
     monthly: "Mensuel"
 
   about : "À propos"
+  not_subscribed : "Non abonné"
 
    # <%=t('')%>.
