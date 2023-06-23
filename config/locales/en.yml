@@ -39,3 +39,5 @@ en:
     monthly: "Monthly"
 
   about : "About"
+  not_subscribed : "You aren't subscribed yet"
+  by : "par"
