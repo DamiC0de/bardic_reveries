@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   end
   
   namespace :admin do
-    get 'dashboard', to: 'dashboard#show'
+    resources :dashboard, only: [:dashboard]
   end
   
 
