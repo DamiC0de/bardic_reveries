@@ -40,6 +40,8 @@ fr:
 
   about : "À propos"
   not_subscribed : "Vous n'êtes pas encore abonné"
-  by : "by"
+  by : "par"
+  send_me_reset_password_instructions : "Envoyez-moi les instructions de réinitialisation du mot de passe"
+
 
    # <%=t('')%>.
