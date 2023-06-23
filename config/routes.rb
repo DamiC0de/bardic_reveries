@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   end
   
   namespace :admin do
-    resources :dashboard, only: [:dashboard]
+    resources :dashboard, only: [:index]
   end
   
 
