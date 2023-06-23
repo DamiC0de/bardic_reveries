@@ -24,8 +24,8 @@
     <div class="story-summary current-subscription">
       <h1><%= t("current_subscription") %> <%= t("subscription_plans.#{@current_subscription.subscription_plan.name}", default: @current_subscription.subscription_plan.name) %></h1>
       <p><%= @current_subscription.subscription_plan.description %></p>
-      <p>Price: <%= @current_subscription.subscription_plan.cost %>€</p>
-      <p><%= t("current_subscription") %> <%= distance_of_time_in_words(Time.now,@current_subscription.expiration_date) %> : <%=@current_subscription.expiration_date%></p>
+      <p><%=t('price')%>: <%= @current_subscription.subscription_plan.cost %>€</p>
+      <p><%= t("current_subscription") %> <%= distance_of_time_in_words(Time.now,@current_subscription.expiration_date) %>.</p>
     </div>
   <% end %>
   
