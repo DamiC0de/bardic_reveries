@@ -17,7 +17,7 @@ Rails.application.routes.draw do
       post :stripe_webhooks
     end
   end
-
+  
   namespace :admin do
     resources :dashboard, only: [:index]
   end

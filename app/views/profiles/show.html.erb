@@ -10,14 +10,8 @@
       <%end %>
 
       <%if current_user.subscriptions.any?%>
-        <% exp = current_user.subscriptions.all.sample %>
-        <% current_user.subscriptions.each do |sub|%>
-          <% if sub.active? %>
-            <%if sub.expiration_date >= exp.expiration_date %>
-              <%exp = sub%>
-            <%end%>
-          <%end%>
-        <%end%>
+        <% date_of_expiration = (current_user.subscriptions).maximum(:expiration_date) %>
+        <% exp = current_user.subscriptions.find_by(expiration_date:date_of_expiration)%>
         <%if exp.active?%>
           - <%=t('time_remain')%>  : 
           <%= distance_of_time_in_words(Time.now,exp.expiration_date,options = {include_seconds: true})%>
@@ -25,7 +19,6 @@
           Your subscription expired <%= distance_of_time_in_words(exp.expiration_date,Time.now,options = {include_seconds: true})%> ago
         <%end%>
       <%else%>
-      
       <%end%>
 
     </div>

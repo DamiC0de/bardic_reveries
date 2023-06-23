@@ -25,11 +25,12 @@
       </ul>
     </div>
 
+<nav class="navbar">
   <ul class="navbar-nav">
   <% if user_signed_in? %>
-      <%if current_user.is_admin %>
-        <li><%= link_to "AdminDashboard", "/admin/dashboard", class: ("active" if current_page?(new_story_path)) %></li>   
-      <%end%> 
+      <% if current_user.is_admin %>
+      <li><%= link_to 'Admin Dashboard', admin_dashboard_path, class: ("active" if current_page?(admin_dashboard_path)) %></li>
+      <% end %> 
       <li><%= link_to t('new_story'), new_story_path, class: ("active" if current_page?(new_story_path)) %></li>
       <li><%= link_to t('personnal_stories'), stories_path, class: ("active" if current_page?(stories_path)) %></li> 
       <li><%= link_to t('my_profile'), profile_path, class: ("active" if current_page?(profile_path)) %></li>
