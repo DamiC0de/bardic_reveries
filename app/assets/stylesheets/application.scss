@@ -294,6 +294,11 @@ h1#current-subscription {
   font-size: 1.8rem;
 }
 
+h1#current-subscription {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
 .subscription-info {
   margin-bottom: 2rem;
 }
@@ -590,59 +595,7 @@ footer {
   color: #d3eaf3;
 }
 
-// CSS for multiple devices
-
-/*#############################################*/
-/*#                MAC BOOK AIR                #*/
-/*#############################################*/ 
-
-@media screen and (max-width: 1440px) {
-
-.logo {
-  margin-top: 0.5rem;
-  width: 15rem;
-  height: 2rem;
-}
-
-.navbar {
-  font-size: 16px;
-  padding: 0.3rem 1rem 0.2rem 0;
-} 
-
-// Title
-
-h2#profile {
-  margin-top: 0.8em;
-  margin-bottom: 2rem;
-}
-
-// Cards
-
-
-.subscription-plan {
-  height: 206px;
-  width: 210px;
-}
-
-.story-summary h2 {
-  font-size: 1.6rem;
-}
-
-.form-box {
-  margin-top: 0rem;
-}
-
-.field input {
-  padding-top: 0.8rem
-}
-
-.field input, .field select{
-  height: 0.8rem;
-  border-radius: 0.8rem;
-
-}
-
-}
+// CSS for mobile display
 
 /*#############################################*/
 /*#             IPHONE 14/ 14PRO              #*/
