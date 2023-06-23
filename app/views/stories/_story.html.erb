@@ -7,9 +7,9 @@
       <p><%=t('creation_story')%> <%= story.created_at.to_date %><%if (story.user).pseudo %> <%=t('by')%> <%=(story.user).pseudo%><%end%></p>
     </td>
     <td>
-      <% if story.language == "en français" or story.language == "En français"%> <div id="fr"></div> 
+      <% if story.language == "French"%> <div id="fr"></div> 
       <%else%>
-        <% if story.language == "in english" %> <div id="uk"></div><%end%>
+        <% if story.language == "English" %> <div id="uk"></div><%end%>
       <%end%>
     </td>
   </table>
