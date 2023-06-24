@@ -5,7 +5,7 @@
   <div class="subscriptions-container">
     <% @subscription_plans.each do |plan| %>
       <div class="subscription-plan">
-        <h2 id="subscription-plan-name"><%= t("subscription_plans.#{plan.name}", default: plan.name) %></h2>
+        <h2><%= t("subscription_plans.#{plan.name}", default: plan.name) %></h2>
         <%# <p><%= plan.description</p> %>
         <p><%= t("price") %>: <%= plan.cost %>€</p>
 
@@ -19,8 +19,9 @@
 
   <% if @current_subscription %>
     <div class="story-summary current-subscription">
-      <h1 id="current-subscription"><%= t("current_subscription") %> <%= t("subscription_plans.#{@current_subscription.subscription_plan.name}", default: @current_subscription.subscription_plan.name) %></h1>
-      <p><%= @current_subscription.subscription_plan.description %></p>
+      <h1 id="current-subscription"><%= t("current_subscription") %></h1> 
+      <h1><%= t("subscription_plans.#{@current_subscription.subscription_plan.name}", default: @current_subscription.subscription_plan.name) %></h1>
+      <%# <p><%= @current_subscription.subscription_plan.description %>
       <p><%=t('price')%>: <%= @current_subscription.subscription_plan.cost %>€</p>
       <p><%= t("current_subscription") %> <%= distance_of_time_in_words(Time.now,@current_subscription.expiration_date) %>.</p>
     </div>
