@@ -289,7 +289,7 @@ h2#profile {
   margin-bottom: 3rem;
 }
 
-h2#saved-stories{
+h2#stories{
   margin-top: 2rem;
   text-align: center;
 }
@@ -606,10 +606,11 @@ footer {
 /*#               Mac Book Air                #*/
 /*#############################################*/ 
 
-@media screen and (max-width: 393px) {
+@media screen and (max-width: 1440px) {
 
 .subscription-plan {
-  width: 223px;
+  height: 211px;
+  width: 200px;
 }
 
 }
@@ -625,7 +626,7 @@ footer {
 .logo{
   width: 10rem;
   height: 2rem;
-  margin-left: 1.2rem;
+  margin: 1rem;
 }
 
 #uk{
@@ -639,6 +640,7 @@ footer {
 
 .navbar {
   overflow: hidden;
+  padding: 0rem 0em 0rem 0;
 }
   
 .navbar-nav {
@@ -679,10 +681,18 @@ footer {
 
 .profile-mobile {
   display: block;
-  margin-left: 0.6rem;
+  height: 2.4rem;
+  margin-top: 0.8rem;
+  margin-right: 1rem;
+
 }
 
 // Text
+
+h2#stories {
+  margin-top: 0rem;
+
+}
 
 h2#profile {
   margin-top: 1rem;
@@ -777,6 +787,11 @@ h2#profile {
 
 
 // Buttons
+
+
+.device-home {
+  margin-top: 0rem;
+}
 
 .button-text {
   font-size: 24px;
