@@ -27,17 +27,19 @@
 
 <% else %>
 
-  <div class="device-loginSubscribe">
   
+<div class="introduction">  
   <h2>Bienvenue sur</h2> 
   <div class="logo"></div> 
 
   <div class="story-card">     
-    <p>"Bardic Reveries" est une application de création d'histoires personnalisées pour enfants, basée sur l'API de GPT. Elle crée des histoires adaptées aux préférences et à l'âge de chaque enfant, stimulant son imagination tout en offrant un divertissement éducatif.</p>
-    <br><p>Ici chaque utilisateur est à la barre de son propre voyage narratif. L'application offre une gamme de choix de personnalisation, du thème de l'histoire aux noms des personnages, en passant par l'âge de l'enfant pour adapter le vocabulaire, et même la durée de l'histoire. Les histoires créées peuvent être sauvegardées, partagées.Pour pouvoir commencer à générer des histoires il vous suffit de vous créer un compte et de souscrire à un abonnement.</p>
-    <p>Le paiement ce fera via un module de paiement sécurisé intégré.</p>
-    </div>  
+    <p>"Bardic Reveries" is an application for creating personalized stories for children, based on GPT's API. It creates stories tailored to each child's preferences and age, stimulating their imagination while providing educational entertainment.</p>
+    <br><p>Here, each user is at the helm of his or her own narrative journey. The application offers a range of customization options, from story theme to character names, from the age of the child to adapt the vocabulary, and even the length of the story. To start generating stories, all you need to do is create an account and take out a subscription.</p>
+    <p>Payment is made via an integrated secure payment module.</p>
+  </div> 
+</div>
 
+<div class="device-loginSubscribe">
   <%= link_to new_user_session_path, style: "text-decoration: none;" do %>
       <div class='signIn-nav-button'>
         <%=t('login')%>
@@ -56,7 +58,7 @@
       </div>
     <% end %>
 
-  </div>
+</div>
 <% end %>
 
 

@@ -317,7 +317,15 @@ h1#current-subscription {
 
   
 /* Cards */
-  
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* pour centrer également le texte */
+}
+
 .story-card {
   width: 80%;
   margin: 5% auto;
@@ -828,6 +836,10 @@ h2#profile {
 /* Home */
 
 .stories-container {
+  display: none;
+}
+
+.introduction{
   display: none;
 }
 
