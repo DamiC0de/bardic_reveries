@@ -26,7 +26,8 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: #00121f;
-  padding: 1rem 4rem 1rem 0;
+  padding: 0.4rem 2rem 0.4rem 0;
+  font-size: 22px;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   font-size: large;
@@ -79,7 +80,6 @@ body {
   justify-content: center;
   align-items: center;
   list-style-type: none;
-  margin: 0;
   padding: 0;
 }
 
@@ -289,6 +289,11 @@ h2#profile {
   margin-bottom: 3rem;
 }
 
+h2#stories{
+  margin-top: 2rem;
+  text-align: center;
+}
+
 h1#current-subscription {
   text-align: center;
   font-size: 1.8rem;
@@ -312,7 +317,15 @@ h1#current-subscription {
 
   
 /* Cards */
-  
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* pour centrer également le texte */
+}
+
 .story-card {
   width: 80%;
   margin: 5% auto;
@@ -436,6 +449,11 @@ footer {
 .main-content {
   flex: 1;
 } 
+
+
+
+
+
   
 /* Mobile display */
   
@@ -595,7 +613,42 @@ footer {
   color: #d3eaf3;
 }
 
-// CSS for mobile display
+// CSS for other display
+
+/*#############################################*/
+/*#               Mac Book Air                #*/
+/*#############################################*/ 
+
+@media screen and (max-width: 1440px) {
+
+.logo{
+  width: 16rem;
+  margin-top: 0.6rem;
+}
+
+// Text
+
+.story-summary {
+  font-size: 0.7rem;
+}
+
+h1#current-subscription {
+  font-size: 1.5rem;
+}
+
+.subscription-plan {
+  height: 211px;
+  width: 200px;
+}
+
+.story-card {
+  margin-top: 3rem;
+}
+
+
+}
+
+
 
 /*#############################################*/
 /*#             IPHONE 14/ 14PRO              #*/
@@ -606,7 +659,7 @@ footer {
 .logo{
   width: 10rem;
   height: 2rem;
-  margin-left: 1.2rem;
+  margin: 1rem;
 }
 
 #uk{
@@ -620,6 +673,7 @@ footer {
 
 .navbar {
   overflow: hidden;
+  padding: 0rem 0em 0rem 0;
 }
   
 .navbar-nav {
@@ -660,14 +714,27 @@ footer {
 
 .profile-mobile {
   display: block;
-  margin-left: 0.6rem;
+  height: 2.4rem;
+  margin-top: 0.8rem;
+  margin-right: 1rem;
+
 }
 
 // Text
 
+h2#stories {
+  margin-top: 0rem;
+
+}
+
 h2#profile {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+h1#current-subscription {
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 .form-box {
@@ -729,6 +796,7 @@ h2#profile {
   border-radius: 40px;
   padding: 2rem;
   margin-bottom: 2rem;
+  text-align: center;
 
 }
 
@@ -758,6 +826,11 @@ h2#profile {
 
 
 // Buttons
+
+
+.device-home {
+  margin-top: 0rem;
+}
 
 .button-text {
   font-size: 24px;
@@ -794,6 +867,10 @@ h2#profile {
 /* Home */
 
 .stories-container {
+  display: none;
+}
+
+.introduction{
   display: none;
 }
 
@@ -929,4 +1006,17 @@ footer{
 }
 .stripe-checkout-button:hover{
   background-color: #01588d;
+}
+
+.table-users{
+  background-color:#021e33;
+}
+.table-order{
+  color: #021e33;
+  background-color: white;
+}
+.table-admin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
