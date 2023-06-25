@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
   
   <div class="stories-container">
-    <h2 id=stories>Latest public stories</h2>
+    <h2 id=stories><%=t('latest_public_stories')%></h2>
     <%= render @stories %>
   </div>
 
@@ -29,13 +29,15 @@
 
   
 <div class="introduction">  
-  <h2>Bienvenue sur</h2> 
+  <h2><%=t('welcome_on')%></h2> 
   <div class="logo"></div> 
 
   <div class="story-card">     
-    <p>"Bardic Reveries" is an application for creating personalized stories for children, based on GPT's API. It creates stories tailored to each child's preferences and age, stimulating their imagination while providing educational entertainment.</p>
-    <br><p>Here, each user is at the helm of his or her own narrative journey. The application offers a range of customization options, from story theme to character names, from the age of the child to adapt the vocabulary, and even the length of the story. To start generating stories, all you need to do is create an account and take out a subscription.</p>
-    <p>Payment is made via an integrated secure payment module.</p>
+  <%=t('introduction_message_1')%>
+  <p>
+  <%=t('introduction_message_2')%>
+  <p>
+  <%=t('introduction_message_3')%>
   </div> 
 </div>
 

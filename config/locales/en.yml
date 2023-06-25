@@ -42,3 +42,9 @@ en:
   not_subscribed : "You aren't subscribed yet"
   by : "by"
   send_me_reset_password_instructions : "Send me reset password instructions"
+  welcome_on : "Welcome on"
+  introduction_message_1: "\"Bardic Reveries\" is an application for creating personalized stories for children, based on GPT's API. It creates stories tailored to each child's preferences and age, stimulating their imagination while providing educational entertainment."
+  introduction_message_2: "Here, each user is at the helm of his or her own narrative journey. The application offers a range of customization options, from story theme to character names, from the age of the child to adapt the vocabulary, and even the length of the story. To start generating stories, all you need to do is create an account and take out a subscription."
+  introduction_message_3: "Payment is made via an integrated secure payment module."
+  latest_public_stories : "Latest public stories"
+
