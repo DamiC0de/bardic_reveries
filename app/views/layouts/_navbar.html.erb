@@ -21,9 +21,16 @@
       <ul id="dropmenu-list">
         <li><%= link_to t('my_profile'), profile_path, class: ("active" if current_page?(stories_path)) %></li> 
         <li><%= link_to t('subscription'), subscriptions_path, class: ("active" if current_page?(subscriptions_path)) %></li>
-        <li><%= link_to t('disconnect'), destroy_user_session_path, method: :get %></li>
+        <% if user_signed_in? %>
+          <% if current_user.is_admin %>
+            <li><%= link_to 'Admin Dashboard', admin_dashboard_path, class: ("active" if current_page?(admin_dashboard_path)) %></li>
+          <% end %> 
+          <li><%= link_to t('disconnect'), destroy_user_session_path, method: :get %></li>
+        <% end %> 
       </ul>
     </div>
+
+
 
 <nav class="navbar">
   <ul class="navbar-nav">

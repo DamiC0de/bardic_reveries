@@ -621,6 +621,10 @@ footer {
 
 @media screen and (max-width: 1440px) {
 
+.navbar {
+  font-size: 1rem;
+}
+
 .logo{
   width: 16rem;
   margin-top: 0.6rem;
@@ -645,41 +649,34 @@ h1#current-subscription {
   margin-top: 3rem;
 }
 
-
+.story-summary h2 {
+  font-size: 1.5rem;
 }
 
 
+}
+
+@media screen and (max-width: 1402x) {
+  .navbar {
+    font-size: 1rem;
+  }
+  
+}
 
 /*#############################################*/
-/*#             IPHONE 14/ 14PRO              #*/
+/*#                  IPAD 12                  #*/
 /*#############################################*/ 
 
-@media screen and (max-width: 393px) {
-
-.logo{
-  width: 10rem;
-  height: 2rem;
-  margin: 1rem;
-}
-
-#uk{
-  margin-left: 2.2rem;
-
-}
-
-#fr{
-  margin-right: 2.2rem;
-}
-
+@media screen and (max-width: 1024px) {
 .navbar {
   overflow: hidden;
   padding: 0rem 0em 0rem 0;
 }
-  
+    
 .navbar-nav {
   display: none;
 }
-
+  
 .dropdown-menu {
   display: none;
   position: fixed; /* Positionnement du menu par rapport à la fenêtre du navigateur */
@@ -692,33 +689,182 @@ h1#current-subscription {
   z-index: 1;
 }
 
+.device-home {
+  margin-top: 7rem;
+}
+
+
+// Buttons
+
+.newStory-nav-button {
+  width: 318px;
+  height: 124px;
+  line-height: 4.6rem;
+  margin-top: 1.9rem;
+  font-size: 2.2rem;
+  line-height: 7.1rem;
+}
+
+.savedStories-nav-button {
+  width: 263px;
+  height: 101px;
+  font-size: 2rem;
+  line-height: 5.6rem;
+  margin-top: 4rem;
+}
+
+.storyPublic-nav-button{
+  width: 263px;
+  height: 100px;
+  font-size: 2rem;
+  line-height: 5.6rem;
+  margin-top: 5rem;
+}
+
+  
 .dropdown-menu a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
-
+  
 .dropdown-menu a:hover {
   color: #007bff; 
 }
-
+  
 .dropdown-menu a:active {
   color: #007bff;
 }
-
+  
 #dropmenu-list {
   display: block;
 }
+  
+  
+.profile-mobile {
+  display: block;
+  height: 2.4rem;
+  margin-top: 0.8rem;
+  margin-right: -10rem;
+}
 
+.newStory-nav-button {
+   display: block;
+}
+  
+.savedStories-nav-button {
+  display: block;
+}
+  
+.subscription-nav-button {
+  display: block;
+}
+  
+.storyPublic-nav-button {
+   display: block;
+}
+  
+.signIn-nav-button {
+  display: block;
+}
+    
+.signUp-nav-button {
+  display: block;
+}
+
+.about-nav-button {
+  display: block;
+}
+
+// Pages
+/* Home */
+  
+.stories-container {
+  display: none;
+}
+  
+.introduction{
+  display: none;
+}
+  
+.public-story-container{
+  display: block;
+}
+
+// CARDS
+
+.story-summary {
+  width: 80%;
+}
+
+.subscription-plan {
+  height: 181px;
+  width: 196px;
+}
+
+.story-summary h2 {
+  font-size: 1.5rem;
+}
+
+
+}
+
+/*#############################################*/
+/*#                 IPHONE 11                  #*/
+/*#############################################*/ 
+
+@media screen and (max-width: 414px) {
+
+.logo{
+  width: 10rem;
+  height: 2rem;
+  margin: 1rem;
+}
+  
+#uk{
+  margin-left: 2.2rem;
+  
+}
+  
+#fr{
+  margin-right: 2.2rem;
+}
+
+.device-home {
+  margin-top: 2rem;
+}
 
 .profile-mobile {
   display: block;
   height: 2.4rem;
   margin-top: 0.8rem;
   margin-right: 1rem;
-
 }
+
+.newStory-nav-button {
+  width: 204px;
+  height: 78px;
+  line-height: 4.6rem;
+  margin-top: 6rem;
+}
+
+.savedStories-nav-button {
+  width: 173px;
+  height: 67px;
+  font-size: 1.1rem;
+  line-height: 4.2rem;
+  margin-top: 0.6rem;
+}
+
+.storyPublic-nav-button {
+  width: 151px;
+  height: 57px;
+  font-size: 1.1rem;
+  line-height: 3.6rem;
+  margin-top: 2rem;
+}
+    
 
 // Text
 
@@ -797,6 +943,7 @@ h1#current-subscription {
   padding: 2rem;
   margin-bottom: 2rem;
   text-align: center;
+  width: 60%;
 
 }
 
@@ -815,7 +962,7 @@ h1#current-subscription {
 }
 
 .subscription-plan {
-  margin-left: 0.5rem;
+  margin-left: 0 rem;
   margin-bottom: 1rem;
 }
 
@@ -836,51 +983,22 @@ h1#current-subscription {
   font-size: 24px;
 }
 
-.newStory-nav-button {
-  display: block;
-}
-
-.savedStories-nav-button {
-  display: block;
-}
-
-.subscription-nav-button {
-  display: block;
-}
-
-.storyPublic-nav-button {
-  display: block;
-}
-
-.signIn-nav-button {
-  display: block;
-}
-  
-.signUp-nav-button {
-  display: block;
-}
-.about-nav-button {
-  display: block;
-}
-
-// Pages
-/* Home */
-
-.stories-container {
-  display: none;
-}
-
-.introduction{
-  display: none;
-}
-
-.public-story-container{
-  display: block;
-}
 
 footer{
   font-size: 12px;
 }
+
+  
+
+}
+
+
+/*#############################################*/
+/*#             IPHONE 14/ 14PRO              #*/
+/*#############################################*/ 
+
+@media screen and (max-width: 393px) {
+  
 
 }
 
@@ -930,7 +1048,7 @@ footer{
 .newStory-nav-button {
   width: 187px;
   height: 73px;
-  line-height: 4.6rem;
+  line-height: 4.1rem;
   margin-top: 1.9rem;
 }
 
@@ -955,7 +1073,7 @@ footer{
 }
 
 .button-text {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 // Cards
