@@ -692,13 +692,44 @@ h1#current-subscription {
 
 // Buttons
 
-.newStory-nav-button {
+.device-loginSubscribe{
+  margin-top: 12rem;
+}
+
+.signIn-nav-button{
   width: 318px;
   height: 124px;
   line-height: 4.6rem;
   margin-top: 1.9rem;
   font-size: 2.2rem;
   line-height: 7.1rem;
+}
+
+.signUp-nav-button{
+  width: 318px;
+  height: 124px;
+  line-height: 4.6rem;
+  margin-top: 4rem;
+  font-size: 2.2rem;
+  line-height: 7.1rem;
+}
+
+.about-nav-button{
+  width: 222px;
+  height: 86px;
+  line-height: 4.6rem;
+  margin-top: 4rem;
+  font-size: 2.2rem;
+  line-height: 5.1rem;
+}
+
+.newStory-nav-button {
+  width: 318px;
+  height: 124px;
+  line-height: 4.6rem;
+  margin-top: 1.9rem;
+  font-size: 2.2rem;
+  line-height: 7.6rem;
 }
 
 .savedStories-nav-button {
@@ -831,11 +862,38 @@ h1#current-subscription {
   margin-top: 2rem;
 }
 
+.device-loginSubscribe{
+  margin-top: 3rem;
+}
+
 .profile-mobile {
   display: block;
   height: 2.4rem;
   margin-top: 0.8rem;
   margin-right: 1rem;
+}
+
+.signIn-nav-button {
+  width: 220px;
+  height: 83px;
+  font-size: 1.8rem;
+  line-height: 5.1rem;
+}
+
+.signUp-nav-button{
+  width: 220px;
+  height: 83px;
+  font-size: 1.8rem;
+  line-height: 5.1rem;
+  margin-top: 2.2rem;
+}
+
+.about-nav-button{
+  width: 147px;
+  height: 55px;
+  font-size: 1.6rem;
+  line-height: 3.8rem;
+  margin-top: 2.2rem;
 }
 
 .newStory-nav-button {
@@ -860,7 +918,8 @@ h1#current-subscription {
   line-height: 3.6rem;
   margin-top: 2rem;
 }
-    
+
+
 
 // Text
 

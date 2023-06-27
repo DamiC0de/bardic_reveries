@@ -45,8 +45,9 @@ class StoriesController < ApplicationController
   end  
 
   def public_story
-    @stories = Story.all
-  end     
+    @stories = Story.all.order(created_at: :desc)
+  end
+    
       
   private
   
