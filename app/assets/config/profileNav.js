@@ -1,5 +1,5 @@
 document.getElementById("profile-mobile-button").addEventListener("click", function() {
-  var dropdownMenu = document.getElementById("dropdown-menu");
+  const dropdownMenu = document.getElementById("dropdown-menu");
   if (dropdownMenu.style.display === "none") {
     dropdownMenu.style.display = "block";
   } else {
